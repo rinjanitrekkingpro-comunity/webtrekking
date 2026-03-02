@@ -1,0 +1,58 @@
+/* Custom Styles to match the poster design */
+.card-overlap {
+    margin-top: -80px;
+    position: relative;
+    z-index: 10;
+}
+.page-section {
+    display: none;
+    animation: fadeIn 0.4s ease-in-out;
+}
+.page-section.active {
+    display: block;
+}
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+.bg-hero {
+    /* Path gambar diperbaiki di sini */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.1)), url('images/background-utama.jpg');
+    background-size: cover;
+    background-position: center;
+}
+.bg-pattern {
+    background-color: #f0f7ff;
+    background-image: radial-gradient(#bae6fd 2px, transparent 2px);
+    background-size: 30px 30px;
+}
+.nav-link {
+    cursor: pointer;
+    transition: color 0.3s;
+}
+.nav-link:hover {
+    color: #5bc0de;
+}
+.amenity-box {
+    background: white;
+    border: 2px solid #e0f2fe;
+    border-radius: 16px;
+    transition: all 0.3s;
+}
+.amenity-box:hover {
+    border-color: #0275d8;
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+/* Mobile menu dropdown */
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+/* Floating WA Animation */
+@keyframes bounce-slow {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+.animate-bounce-slow {
+    animation: bounce-slow 3s infinite ease-in-out;
+}
