@@ -640,6 +640,17 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             window.scrollTo({ top: 0, behavior: 'smooth' });
         }
 
+        window.addEventListener('DOMContentLoaded', (event) => {
+            if(window.location.hash) {
+                const targetId = window.location.hash.substring(1); 
+                navigate(targetId);
+            }
+        });
+        // ==========================================
+
+        // WHATSAPP LOGIC
+        function sendToWhatsApp(event) {
+
         // WHATSAPP LOGIC
         function sendToWhatsApp(event) {
             event.preventDefault();
@@ -664,6 +675,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </script>
 </body>
 </html>
+
 
 
 
