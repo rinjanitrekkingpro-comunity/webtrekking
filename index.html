@@ -629,6 +629,23 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </footer>
 
    <script>
+
+       // MOBILE MENU LOGIC (PENGGERAK GARIS TIGA)
+        document.addEventListener('DOMContentLoaded', () => {
+            const btn = document.getElementById('mobile-menu-btn');
+            const menu = document.getElementById('mobile-menu');
+
+            // Fungsi buat buka/tutup menu saat garis tiga diklik
+            btn.addEventListener('click', () => {
+                menu.classList.toggle('hidden');
+            });
+        });
+
+        // Fungsi buat nutup menu otomatis pas bule milih halaman
+        function closeMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.add('hidden');
+        }
         // NAVIGATION LOGIC
         function navigate(pageId) {
             const pages = document.querySelectorAll('.page-section');
@@ -676,6 +693,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </script>
 </body>
 </html>
+
 
 
 
