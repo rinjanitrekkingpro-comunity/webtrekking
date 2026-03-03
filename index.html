@@ -624,7 +624,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
     </footer>
 
-    <script>
+   <script>
         // NAVIGATION LOGIC
         function navigate(pageId) {
             const pages = document.querySelectorAll('.page-section');
@@ -640,16 +640,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             window.scrollTo({ top: 0, behavior: 'smooth' });
         }
 
+        // PENDETEKSI LINK DARI LUAR (Untuk Tombol Booking Form)
         window.addEventListener('DOMContentLoaded', (event) => {
             if(window.location.hash) {
                 const targetId = window.location.hash.substring(1); 
                 navigate(targetId);
             }
         });
-        // ==========================================
-
-        // WHATSAPP LOGIC
-        function sendToWhatsApp(event) {
 
         // WHATSAPP LOGIC
         function sendToWhatsApp(event) {
@@ -675,6 +672,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </script>
 </body>
 </html>
+
 
 
 
