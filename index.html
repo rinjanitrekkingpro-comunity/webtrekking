@@ -514,62 +514,56 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             </div>
         </section>
 
-        <section id="booking" class="page-section py-16 bg-blue-50">
-            <div class="max-w-3xl mx-auto px-4 pb-12">
-                <div class="bg-white rounded-3xl shadow-xl p-8 md:p-10 mb-16 border border-blue-100">
-                    <div class="text-center mb-8">
-                        <h2 class="font-heading font-bold text-3xl text-dark">Booking Form</h2>
-                        <p class="text-gray-500">Fill in your details below to start your Mount Rinjani adventure.</p>
-                    </div>
+      <section id="booking" class="page-section py-20 bg-blue-50">
+            <div class="max-w-4xl mx-auto px-4">
+                <div class="bg-white rounded-[3rem] shadow-2xl overflow-hidden border border-blue-100 grid grid-cols-1 md:grid-cols-5">
                     
-                    <form id="bookingForm" onsubmit="sendToWhatsApp(event)" class="space-y-5 pb-4">
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+                    <div class="md:col-span-2 bg-primary p-10 text-white flex flex-col justify-center">
+                        <h2 class="font-heading font-bold text-3xl mb-6">Ready to Hike?</h2>
+                        <p class="text-blue-100 mb-8 leading-relaxed">Fill the form and our local expert will contact you within 1 hour to discuss your adventure.</p>
+                        <ul class="space-y-4 text-sm">
+                            <li class="flex items-center"><i class="fas fa-check-circle mr-3 text-accent"></i> 100% Secure Booking</li>
+                            <li class="flex items-center"><i class="fas fa-check-circle mr-3 text-accent"></i> Local Guide Expert</li>
+                            <li class="flex items-center"><i class="fas fa-check-circle mr-3 text-accent"></i> Flexible Dates</li>
+                        </ul>
+                    </div>
+
+                    <div class="md:col-span-3 p-10">
+                        <form id="bookingForm" onsubmit="sendToWhatsApp(event)" class="space-y-4">
                             <div>
-                                <label class="block text-sm font-medium text-gray-700 mb-1">Full Name</label>
-                                <input type="text" id="book-name" required class="w-full border border-gray-300 rounded-xl px-4 py-3 focus:ring-primary focus:border-primary outline-none" placeholder="John Doe">
+                                <label class="text-xs font-bold text-gray-400 uppercase tracking-widest ml-1">Full Name</label>
+                                <div class="relative mt-1">
+                                    <i class="fas fa-user absolute left-4 top-4 text-gray-300"></i>
+                                    <input type="text" id="book-name" required class="w-full bg-slate-50 border-none rounded-2xl px-12 py-4 focus:ring-2 focus:ring-primary outline-none" placeholder="Enter your name">
+                                </div>
+                            </div>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                <div>
+                                    <label class="text-xs font-bold text-gray-400 uppercase tracking-widest ml-1">Package</label>
+                                    <select id="book-package" required class="w-full bg-slate-50 border-none rounded-2xl px-4 py-4 mt-1 focus:ring-2 focus:ring-primary outline-none text-gray-600">
+                                        <option value="">Select Package</option>
+                                        <option value="2D1N Summit">2D1N Summit</option>
+                                        <option value="3D2N Lake">3D2N Lake</option>
+                                        <option value="4D3N Advanced">4D3N Advanced</option>
+                                        <option value="2D1N Stampol">2D1N Stampol</option>
+                                        <option value="Sharing Package">Sharing Package (USD)</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label class="text-xs font-bold text-gray-400 uppercase tracking-widest ml-1">Hiking Date</label>
+                                    <input type="date" id="book-date" required class="w-full bg-slate-50 border-none rounded-2xl px-4 py-4 mt-1 focus:ring-2 focus:ring-primary outline-none text-gray-600">
+                                </div>
                             </div>
                             <div>
-                                <label class="block text-sm font-medium text-gray-700 mb-1">WhatsApp Number</label>
-                                <input type="tel" id="book-phone" required class="w-full border border-gray-300 rounded-xl px-4 py-3 focus:ring-primary focus:border-primary outline-none" placeholder="+1 234 567 890">
+                                <label class="text-xs font-bold text-gray-400 uppercase tracking-widest ml-1">Message (Optional)</label>
+                                <textarea id="book-message" rows="3" class="w-full bg-slate-50 border-none rounded-2xl px-4 py-4 mt-1 focus:ring-2 focus:ring-primary outline-none" placeholder="Any special requests?"></textarea>
                             </div>
-                        </div>
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
-                            <div>
-                                <label class="block text-sm font-medium text-gray-700 mb-1">Select Package</label>
-                                <select id="book-package" required class="w-full border border-gray-300 rounded-xl px-4 py-3 focus:ring-primary focus:border-primary outline-none bg-white">
-                                    <option value="">Select package...</option>
-                                    <option value="2 Days 1 Night Summit Trek">2 Days 1 Night Summit Trek</option>
-                                    <option value="3 Days 2 Nights Lake">3 Days 2 Nights Lake</option>
-                                    <option value="4 Days 3 Nights Complete">4 Days 3 Nights Complete</option>
-                                    <option value="2 Days 1 Night Stampol">2 Days 1 Night Stampol</option>
-                                </select>
-                            </div>
-                            <div>
-                                <label class="block text-sm font-medium text-gray-700 mb-1">Hiking Date</label>
-                                <input type="date" id="book-date" required class="w-full border border-gray-300 rounded-xl px-4 py-3 focus:ring-primary focus:border-primary outline-none">
-                            </div>
-                        </div>
-                        <div>
-                            <label class="block text-sm font-medium text-gray-700 mb-1">Number of Participants</label>
-                            <input type="number" id="book-pax" min="1" required class="w-full border border-gray-300 rounded-xl px-4 py-3 focus:ring-primary focus:border-primary outline-none" placeholder="e.g. 2">
-                        </div>
-                        <div>
-                            <label class="block text-sm font-medium text-gray-700 mb-1">Additional Message</label>
-                            <textarea id="book-message" rows="2" class="w-full border border-gray-300 rounded-xl px-4 py-3 focus:ring-primary focus:border-primary outline-none" placeholder="Any allergies or requests?"></textarea>
-                        </div>
-                        
-                        <div class="pb-6 pt-4">
-                            <button type="submit" class="w-full bg-primary hover:bg-blue-700 text-white font-bold py-4 rounded-xl shadow-lg transition flex justify-center items-center">
-                                <i class="fab fa-whatsapp mr-2 text-xl"></i> SEND BOOKING VIA WHATSAPP
+                            <button type="submit" class="w-full bg-primary hover:bg-blue-700 text-white font-bold py-5 rounded-2xl shadow-xl transition transform hover:scale-[1.02] mt-4 flex justify-center items-center">
+                                <i class="fab fa-whatsapp mr-3 text-xl"></i> START BOOKING NOW
                             </button>
-                            <div class="mt-8 pt-6 border-t border-gray-100 text-center">
-                                <p class="text-sm text-gray-500 mb-3">Or book directly via our email:</p>
-                                <a href="mailto:rinjanitrekkingpro@gmail.com" class="inline-flex items-center justify-center bg-blue-50 hover:bg-blue-100 text-primary font-semibold py-3 px-8 rounded-full transition w-full md:w-auto">
-                                    <i class="fas fa-envelope mr-2"></i> rinjanitrekkingpro@gmail.com
-                                </a>
-                            </div>
-                        </div>
-                    </form>
+                        </form>
+                    </div>
+
                 </div>
             </div>
         </section>
@@ -688,18 +682,34 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             </div>
         </section>
 
-        <section id="gallery" class="page-section py-20 bg-slate-50">
+       <section id="gallery" class="page-section py-20 bg-slate-50">
             <div class="max-w-7xl mx-auto px-4">
                 <div class="text-center mb-12">
-                    <span class="font-script text-4xl text-secondary mb-2 block">Memories</span>
+                    <span class="font-script text-4xl text-secondary mb-2 block">Our Memories</span>
                     <h2 class="font-heading font-bold text-4xl text-dark">Rinjani Beauty Gallery</h2>
                     <div class="w-24 h-1.5 bg-primary mx-auto mt-6 rounded-full"></div>
                 </div>
+                
                 <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-                    <div class="overflow-hidden rounded-2xl shadow-md h-48 md:h-64"><img src="images/summit-rinjani.jpg" alt="Rinjani Summit" class="w-full h-full object-cover hover:scale-110 transition duration-500 cursor-pointer"></div>
-                    <div class="overflow-hidden rounded-2xl shadow-md h-48 md:h-64"><img src="images/danau-segaraanak.jpg" alt="Segara Anak Lake" class="w-full h-full object-cover hover:scale-110 transition duration-500 cursor-pointer"></div>
-                    <div class="overflow-hidden rounded-2xl shadow-md h-48 md:h-64"><img src="images/via-senaru.jpg" alt="Senaru Trekking Route" class="w-full h-full object-cover hover:scale-110 transition duration-500 cursor-pointer"></div>
-                    <div class="overflow-hidden rounded-2xl shadow-md h-48 md:h-64"><img src="gallery/stampol-view.jpg" alt="Crater Rim Stampol" class="w-full h-full object-cover hover:scale-110 transition duration-500 cursor-pointer"></div>
+                    <div class="md:col-span-2 md:row-span-2 overflow-hidden rounded-[2rem] shadow-lg h-64 md:h-auto">
+                        <img src="images/summit-rinjani.jpg" alt="Rinjani Summit" class="w-full h-full object-cover hover:scale-110 transition duration-700 cursor-pointer">
+                    </div>
+                    <div class="overflow-hidden rounded-[1.5rem] shadow-md h-48 md:h-64">
+                        <img src="images/danau-segaraanak.jpg" alt="Segara Anak Lake" class="w-full h-full object-cover hover:scale-110 transition duration-700 cursor-pointer">
+                    </div>
+                    <div class="overflow-hidden rounded-[1.5rem] shadow-md h-48 md:h-64">
+                        <img src="images/via-senaru.jpg" alt="Senaru Route" class="w-full h-full object-cover hover:scale-110 transition duration-700 cursor-pointer">
+                    </div>
+                    <div class="overflow-hidden rounded-[1.5rem] shadow-md h-48 md:h-64">
+                        <img src="gallery/stampol-view.jpg" alt="Stampol Rim" class="w-full h-full object-cover hover:scale-110 transition duration-700 cursor-pointer">
+                    </div>
+                    <div class="overflow-hidden rounded-[1.5rem] shadow-md h-48 md:h-64">
+                        <img src="images/pelawangan-sembalun.jpg" alt="Sembalun Rim" class="w-full h-full object-cover hover:scale-110 transition duration-700 cursor-pointer">
+                    </div>
+                </div>
+                
+                <div class="text-center mt-10">
+                    <p class="text-gray-500 italic">Follow our journey on Instagram <a href="#" class="text-primary font-bold hover:underline">@rinjanitrekkingpro</a></p>
                 </div>
             </div>
         </section>
@@ -846,6 +856,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </a>
 </body>
 </html>
+
 
 
 
