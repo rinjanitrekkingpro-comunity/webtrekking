@@ -55,4 +55,21 @@
 }
 .animate-bounce-slow {
     animation: bounce-slow 3s infinite ease-in-out;
+
 }
+
+<style>
+        .page-section { display: none; }
+        .page-section.active { display: block; animation: fadeIn 0.5s; }
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+        .dropdown:hover .dropdown-menu { display: block; }
+        
+        /* Animasi tambahan untuk Banner Laundry */
+        @keyframes bounce-slow {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-8px); }
+        }
+        .animate-bounce-slow {
+            animation: bounce-slow 3s infinite ease-in-out;
+        }
+    </style>
