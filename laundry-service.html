@@ -3,10 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rinjani Laundry Service | Trek Light, Stay Fresh</title>
-    <meta name="description" content="Drop your dirty clothes before hiking Mount Rinjani and pick them up fresh after the trek. Professional laundry service by Rinjani Trekking Pro.">
+    <title>Laundry Service | Rinjani Trekking Pro</title>
+    <link rel="icon" type="image/png" href="images/logo-rinjani-trekking-pro.png">
     
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Playball&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <script src="https://cdn.tailwindcss.com"></script>
@@ -14,170 +16,148 @@
         tailwind.config = {
             theme: {
                 extend: {
-                    fontFamily: { 
-                        sans: ['Poppins', 'sans-serif'], 
-                        heading: ['Montserrat', 'sans-serif'], 
+                    fontFamily: {
+                        sans: ['Poppins', 'sans-serif'],
+                        heading: ['Montserrat', 'sans-serif'],
+                        script: ['Playball', 'cursive'],
                     },
-                    colors: { 
+                    colors: {
                         primary: '#0275d8', 
                         secondary: '#5bc0de', 
-                        dark: '#1e293b', 
-                        accent: '#4CAF50'
+                        accent: '#4CAF50', 
+                        dark: '#1e293b',
                     }
                 }
             }
         }
     </script>
 </head>
-<body class="bg-slate-50 text-gray-800 font-sans antialiased">
+<body class="bg-slate-50 text-gray-800 font-sans antialiased overflow-x-hidden">
 
-    <nav class="w-full z-50 bg-white shadow-md">
+    <nav class="fixed w-full z-50 transition-all duration-300 bg-white shadow-md" id="navbar">
+        <div class="bg-slate-900 text-white text-xs py-2 px-4 sm:px-6 lg:px-8 flex justify-between items-center">
+            <div class="hidden sm:block text-gray-300 font-medium">
+                <span><i class="fab fa-whatsapp text-green-500 mr-1"></i> +62 859 3315 0749</span>
+            </div>
+            <div class="flex space-x-5 ml-auto">
+                <a href="#" target="_blank" class="hover:text-blue-500 transition transform hover:scale-110" title="Facebook"><i class="fab fa-facebook-f text-sm"></i></a>
+                <a href="https://www.instagram.com/rinjanitrekkingpro/" target="_blank" class="hover:text-pink-500 transition transform hover:scale-110" title="Instagram"><i class="fab fa-instagram text-sm"></i></a>
+                <a href="#" target="_blank" class="hover:text-red-500 transition transform hover:scale-110" title="YouTube"><i class="fab fa-youtube text-sm"></i></a>
+                <a href="#" target="_blank" class="hover:text-gray-300 transition transform hover:scale-110" title="TikTok"><i class="fab fa-tiktok text-sm"></i></a>
+            </div>
+        </div>
+
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-16 md:h-20">
-                <a href="index.html" class="flex-shrink-0 flex items-center cursor-pointer overflow-hidden py-1">
-                    <img src="images/logo-rinjani-trekking-pro.png" alt="Logo Rinjani Trekking Pro" class="h-14 md:h-16 w-auto object-contain transition-transform hover:scale-105">
-                </a>
-                <a href="index.html" class="flex-shrink-0 bg-blue-50 text-primary hover:bg-primary hover:text-white px-5 py-2.5 rounded-full text-sm font-bold transition flex items-center border border-blue-200 shadow-sm">
-                    <i class="fas fa-arrow-left"></i> 
-                    <span class="ml-2 hidden sm:block">Back to Home</span>
-                    <span class="ml-2 block sm:hidden">Home</span>
-                </a>
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0 flex items-center cursor-pointer">
+                    <a href="index.html">
+                        <img src="images/logo-rinjani-trekking-pro.png" alt="Logo Rinjani Trekking Pro" class="h-16 md:h-20 w-auto object-contain p-1 lg:scale-110 transition-transform">
+                    </a>
+                </div>
+                
+                <div class="hidden md:flex space-x-6 items-center">
+                    <a href="index.html" class="nav-link font-medium text-gray-700 hover:text-primary transition">Home</a>
+                    <a href="index.html#packages" class="nav-link font-medium text-gray-700 hover:text-primary transition">Packages</a>
+                    <a href="index.html#faq" class="nav-link font-medium text-gray-700 hover:text-primary transition">FAQ</a>
+                    <a href="index.html#contact" class="nav-link font-medium text-gray-700 hover:text-primary transition">Contact</a>
+                    <a href="laundry-service.html" class="nav-link font-bold text-primary border-b-2 border-primary">Laundry</a>
+                    
+                    <a href="index.html#booking" class="bg-primary hover:bg-blue-700 text-white px-6 py-2.5 rounded-full font-semibold transition shadow-lg shadow-blue-500/30">
+                        Book Trekking
+                    </a>
+                </div>
             </div>
         </div>
     </nav>
-
-    <main>
-        <header class="bg-dark text-white pt-32 pb-40 md:pt-40 md:pb-48 relative overflow-hidden text-center">
+    <main class="pt-28">
+        
+        <section class="bg-blue-50 py-16 md:py-24 border-b border-blue-100 relative overflow-hidden">
+            <i class="fas fa-soap absolute top-10 right-10 text-6xl text-blue-100 opacity-50 transform rotate-12"></i>
+            <i class="fas fa-tshirt absolute bottom-10 left-10 text-8xl text-blue-100 opacity-50 transform -rotate-12"></i>
             
-            <div class="absolute inset-0 z-0 bg-cover bg-top" style="background-image: url('images/header-bg.jpg');"></div>
-            <div class="absolute inset-0 z-0 bg-black/20"></div>
-            
-            <div class="relative z-10 max-w-4xl mx-auto px-4">
-                <div class="w-20 h-20 bg-primary rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg shadow-blue-500/30">
-                    <i class="fas fa-tshirt text-3xl text-white"></i>
+            <div class="max-w-4xl mx-auto px-4 text-center relative z-10">
+                <div class="bg-white p-5 rounded-full inline-block mb-6 shadow-md border-4 border-blue-50">
+                    <i class="fas fa-tshirt text-5xl text-primary"></i>
                 </div>
-                <h1 class="font-heading font-extrabold text-4xl md:text-6xl mb-4 leading-tight drop-shadow-xl text-white shadow-black">Trek Light, Stay Fresh!</h1>
-                <p class="text-xl md:text-2xl font-semibold text-white drop-shadow-lg shadow-black mb-8">Exclusive Laundry Service for Hikers</p>
-            </div>
-        </header>
-        <section class="max-w-4xl mx-auto px-4 py-16">
-            <div class="bg-white rounded-[2rem] shadow-xl p-8 md:p-12 border border-gray-100 -mt-24 relative z-20">
-                
-                <h2 class="font-heading text-3xl font-bold text-dark mb-6">Why carry dirty clothes to the mountain?</h2>
-                <p class="text-gray-600 leading-relaxed mb-8 text-lg">
-                    We understand that many backpackers and tourists often arrive at Senaru with dirty clothes from previous travels. Instead of carrying that extra, smelly weight up Mount Rinjani, leave it with us!
-                </p>
-
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12 text-center">
-                    <div class="p-6 bg-slate-50 rounded-2xl border border-gray-100 hover:shadow-md transition">
-                        <i class="fas fa-box-open text-3xl text-secondary mb-4"></i>
-                        <h4 class="font-bold text-dark mb-2">1. Drop Off</h4>
-                        <p class="text-sm text-gray-500">Leave your dirty laundry at our basecamp before you start your trek.</p>
-                    </div>
-                    <div class="p-6 bg-blue-50 rounded-2xl border border-blue-100 hover:shadow-md transition transform hover:-translate-y-1">
-                        <i class="fas fa-soap text-3xl text-primary mb-4"></i>
-                        <h4 class="font-bold text-dark mb-2">2. We Wash & Iron</h4>
-                        <p class="text-sm text-gray-500">We professionally wash, dry, and neatly fold your clothes while you hike.</p>
-                    </div>
-                    <div class="p-6 bg-green-50 rounded-2xl border border-green-100 hover:shadow-md transition">
-                        <i class="fas fa-check-circle text-3xl text-green-500 mb-4"></i>
-                        <h4 class="font-bold text-dark mb-2">3. Pick Up</h4>
-                        <p class="text-sm text-gray-500">Collect your fresh, clean-smelling clothes right after you descend!</p>
-                    </div>
-                </div>
-
-                <h3 class="font-heading text-2xl font-bold text-dark mb-4">Service Pricing</h3>
-                <div class="bg-blue-50 border-l-4 border-primary p-6 rounded-r-xl mb-12">
-                    <ul class="space-y-4">
-                        <li class="flex justify-between items-center border-b border-blue-100 pb-3">
-                            <span class="font-medium text-gray-700"><i class="fas fa-tshirt mr-2 text-primary"></i> Standard Wash & Fold (Next Day)</span>
-                            <span class="font-bold text-primary">IDR 25,000 / Kg</span>
-                        </li>
-                        <li class="flex justify-between items-center border-b border-blue-100 pb-3 pt-1">
-                            <span class="font-medium text-gray-700"><i class="fas fa-bolt mr-2 text-yellow-500"></i> Express Service (Same Day)</span>
-                            <span class="font-bold text-primary">IDR 40,000 / Kg</span>
-                        </li>
-                        <li class="flex justify-between items-center pt-1">
-                            <span class="font-medium text-gray-700"><i class="fas fa-shoe-prints mr-2 text-secondary"></i> Shoe Cleaning</span>
-                            <span class="font-bold text-primary">IDR 35,000 / Pair</span>
-                        </li>
-                    </ul>
-                </div>
-
-                <div class="text-center bg-gray-50 p-8 rounded-2xl border border-gray-100">
-                    <p class="text-gray-600 mb-6 font-medium">Want to use this service? Let us know when you book your package or upon arrival at our basecamp!</p>
-                    <a href="https://wa.me/6285933150749?text=Hello%20Rinjani%20Trekking%20Pro,%20I%20have%20a%20question%20about%20the%20Laundry%20Service." target="_blank" class="inline-flex items-center justify-center px-8 py-4 bg-[#25D366] hover:bg-[#128C7E] text-white rounded-xl font-bold text-lg transition shadow-lg hover:-translate-y-1">
-                        <i class="fab fa-whatsapp text-2xl mr-3"></i> Ask About Laundry
-                    </a>
-                </div>
-
+                <h1 class="font-heading font-extrabold text-4xl md:text-6xl text-dark mb-4">Trek Light, Stay Fresh!</h1>
+                <p class="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto">Drop off your dirty clothes before your Rinjani adventure and pick them up freshly washed, dried, and folded right after your trek.</p>
             </div>
         </section>
+
+        <section class="py-16 bg-white">
+            <div class="max-w-6xl mx-auto px-4">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                    
+                    <div>
+                        <span class="text-secondary font-bold tracking-wider uppercase text-sm mb-2 block">Our Basecamp Facility</span>
+                        <h2 class="text-3xl md:text-4xl font-extrabold text-dark mb-8 leading-tight">Why use our laundry service?</h2>
+                        
+                        <ul class="space-y-6">
+                            <li class="flex items-start bg-slate-50 p-4 rounded-2xl border border-gray-100 hover:shadow-md transition">
+                                <div class="bg-green-100 p-3 rounded-full mr-4 text-green-600">
+                                    <i class="fas fa-weight-hanging text-xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-gray-800 text-lg">Travel Light on the Mountain</h4>
+                                    <p class="text-sm text-gray-600 mt-1">No need to carry smelly, heavy clothes up the mountain. Leave them safely at our basecamp locker.</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start bg-slate-50 p-4 rounded-2xl border border-gray-100 hover:shadow-md transition">
+                                <div class="bg-blue-100 p-3 rounded-full mr-4 text-primary">
+                                    <i class="fas fa-clock text-xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-gray-800 text-lg">Perfect Timing</h4>
+                                    <p class="text-sm text-gray-600 mt-1">We wash your clothes while you are hiking. They will be 100% ready, fragrant, and folded the moment you return.</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start bg-slate-50 p-4 rounded-2xl border border-gray-100 hover:shadow-md transition">
+                                <div class="bg-yellow-100 p-3 rounded-full mr-4 text-yellow-600">
+                                    <i class="fas fa-sparkles text-xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-gray-800 text-lg">Premium Detergent</h4>
+                                    <p class="text-sm text-gray-600 mt-1">We use high-quality, eco-friendly detergents to ensure your favorite trekking gear is treated with care.</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-slate-900 rounded-[2.5rem] p-8 md:p-12 shadow-2xl relative overflow-hidden text-center text-white transform hover:scale-[1.02] transition duration-300">
+                        <div class="absolute top-0 right-0 bg-secondary text-white text-xs px-4 py-2 rounded-bl-xl font-bold">
+                            EXPRESS SERVICE
+                        </div>
+                        
+                        <h3 class="text-2xl font-bold mb-2 text-gray-300 font-heading">Simple & Transparent Pricing</h3>
+                        <p class="text-gray-400 text-sm mb-8">No hidden fees, pay per kilogram.</p>
+                        
+                        <div class="bg-slate-800 rounded-3xl p-8 mb-8 border border-slate-700">
+                            <span class="block text-gray-400 mb-2 uppercase tracking-widest text-xs font-bold">Price per Kg</span>
+                            <div class="flex justify-center items-baseline text-green-400">
+                                <span class="text-3xl font-bold mr-2">IDR</span>
+                                <span class="text-6xl font-extrabold tracking-tighter">15,000</span>
+                            </div>
+                            <p class="text-sm text-gray-400 mt-4 italic">*Wash, Dry, and Fold included.</p>
+                        </div>
+
+                        <a href="https://wa.me/6285933150749?text=Hello%20Rinjani%20Trekking%20Pro,%20I%20am%20interested%20in%20your%20Laundry%20Service%20at%20the%20basecamp." target="_blank" class="block w-full bg-green-500 hover:bg-green-600 text-white font-bold py-4 rounded-xl transition shadow-[0_0_15px_rgba(34,197,94,0.4)] flex justify-center items-center text-lg">
+                            <i class="fab fa-whatsapp mr-2 text-2xl"></i> Book Service Now
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
     </main>
 
-      <footer class="bg-slate-900 text-white pt-16 pb-8 border-t-4 border-primary">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
-                
-                <div class="md:col-span-1">
-                    <img src="images/logo-rinjani-trekking-pro.png" alt="Rinjani Trekking Pro" class="h-16 mb-4 bg-white p-2 rounded-xl">
-                    <p class="text-gray-400 text-sm leading-relaxed mb-6">Your trusted local expert for Mount Rinjani trekking. 100% transparent, eco-friendly, and professional services.</p>
-                    <div class="flex space-x-4">
-                        <a href="#" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center text-gray-400 hover:bg-primary hover:text-white transition cursor-pointer"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center text-gray-400 hover:bg-primary hover:text-white transition cursor-pointer"><i class="fab fa-instagram"></i></a>
-                        <a href="#" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center text-gray-400 hover:bg-primary hover:text-white transition cursor-pointer"><i class="fab fa-tripadvisor"></i></a>
-                    </div>
-                </div>
-
-                <div>
-                    <h4 class="font-bold text-lg mb-6 border-b border-slate-700 pb-2">Quick Links</h4>
-                    <ul class="space-y-3 text-sm text-gray-400">
-                        <li><a onclick="navigate('home')" class="hover:text-primary transition cursor-pointer">Home</a></li>
-                        <li><a onclick="navigate('about')" class="hover:text-primary transition cursor-pointer">About Us</a></li>
-                        <li><a onclick="navigate('packages')" class="hover:text-primary transition cursor-pointer">Trekking Packages</a></li>
-                        <li><a onclick="navigate('gallery')" class="hover:text-primary transition cursor-pointer">Gallery</a></li>
-                        <li><a href="laundry-service.html" class="hover:text-primary transition font-semibold text-secondary">Laundry Service</a></li>
-                    </ul>
-                </div>
-
-                <div>
-                    <h4 class="font-bold text-lg mb-6 border-b border-slate-700 pb-2">Support</h4>
-                    <ul class="space-y-3 text-sm text-gray-400">
-                        <li><a onclick="navigate('faq')" class="hover:text-primary transition cursor-pointer">FAQ</a></li>
-                        <li><a onclick="navigate('equipment')" class="hover:text-primary transition cursor-pointer">Equipment List</a></li>
-                        <li><a onclick="navigate('safety')" class="hover:text-primary transition cursor-pointer">Safety Procedures</a></li>
-                        <li><a onclick="navigate('price')" class="hover:text-primary transition cursor-pointer">Pricing List</a></li>
-                        <li><a onclick="navigate('contact')" class="hover:text-primary transition cursor-pointer">Contact Us</a></li>
-                    </ul>
-                </div>
-
-                <div>
-                    <h4 class="font-bold text-lg mb-6 border-b border-slate-700 pb-2">Contact</h4>
-                    <ul class="space-y-4 text-sm text-gray-400">
-                        <li class="flex items-start">
-                            <i class="fas fa-map-marker-alt mt-1 mr-3 text-primary"></i>
-                            <span>Jl. Pariwisata Senaru, Kec. Bayan, Lombok Utara, NTB</span>
-                        </li>
-                        <li class="flex items-center">
-                            <i class="fab fa-whatsapp mr-3 text-green-500"></i>
-                            <a href="https://wa.me/6285933150749" target="_blank" class="hover:text-white transition">+62 859 3315 0749</a>
-                        </li>
-                        <li class="flex items-center">
-                            <i class="fas fa-envelope mr-3 text-primary"></i>
-                            <a href="mailto:rinjanitrekkingpro@gmail.com" class="hover:text-white transition">rinjanitrekkingpro@gmail.com</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="border-t border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-gray-500">
-                <p>&copy; 2026 Rinjani Trekking Pro. All rights reserved.</p>
-                <div class="mt-4 md:mt-0 space-x-4">
-                    <a href="#" class="hover:text-white transition">Privacy Policy</a>
-                    <a href="#" class="hover:text-white transition">Terms of Service</a>
-                </div>
-            </div>
+    <footer class="bg-slate-900 text-white pt-12 pb-8 border-t-4 border-primary">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <h2 class="font-heading font-bold text-2xl mb-4">Rinjani Trekking Pro</h2>
+            <p class="text-gray-400 text-sm mb-6 max-w-xl mx-auto">Your trusted local expert for Mount Rinjani trekking. Basecamp: Jl. Pariwisata Senaru, Lombok Utara.</p>
+            <p class="text-gray-500 text-xs">&copy; 2026 Rinjani Trekking Pro. All rights reserved.</p>
         </div>
     </footer>
+
 </body>
 </html>
