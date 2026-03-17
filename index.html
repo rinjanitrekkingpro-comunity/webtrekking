@@ -1268,6 +1268,58 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 });
             });
         });
+
+       // SLIDER LOGIC
+        document.addEventListener('DOMContentLoaded', () => {
+            let currentSlideIndex = 0;
+            const slides = document.querySelectorAll('.hero-slide');
+            const dots = document.querySelectorAll('.slider-dot');
+            let slideInterval;
+
+            function showSlide(index) {
+                // Sembunyikan semua slide dan redupkan semua dot
+                slides.forEach((slide) => {
+                    slide.classList.remove('opacity-100', 'z-10');
+                    slide.classList.add('opacity-0', 'z-0');
+                });
+                dots.forEach((dot) => {
+                    dot.classList.remove('opacity-100');
+                    dot.classList.add('opacity-40');
+                });
+
+                // Tampilkan slide aktif
+                slides[index].classList.remove('opacity-0', 'z-0');
+                slides[index].classList.add('opacity-100', 'z-10');
+                dots[index].classList.remove('opacity-40');
+                dots[index].classList.add('opacity-100');
+            }
+
+            function nextSlide() {
+                currentSlideIndex++;
+                if (currentSlideIndex >= slides.length) {
+                    currentSlideIndex = 0;
+                }
+                showSlide(currentSlideIndex);
+            }
+
+            // Fungsi saat dot diklik manual
+            window.goToSlide = function(index) {
+                currentSlideIndex = index;
+                showSlide(currentSlideIndex);
+                resetInterval(); // Ulangi timer jika diklik manual
+            };
+
+            function resetInterval() {
+                clearInterval(slideInterval);
+                slideInterval = setInterval(nextSlide, 5000); // Ganti gambar setiap 5 detik
+            }
+
+            // Jalankan pertama kali
+            if(slides.length > 0) {
+                showSlide(0);
+                resetInterval();
+            }
+        });
     </script>
 
     <a href="https://wa.me/6285933150749?text=Hello%20Rinjani%20Trekking%20Pro%2C%20I%20need%20more%20information%20about%20your%20trekking%20packages." 
