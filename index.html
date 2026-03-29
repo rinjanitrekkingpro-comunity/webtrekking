@@ -173,61 +173,51 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     <main class="pt-28">
 
-        <section id="home" class="page-section active">
-           <div class="relative bg-slate-900 h-[600px] md:h-[700px] overflow-hidden" id="hero-slider">
+      <section id="home" class="page-section active">
+            <div class="relative bg-slate-900 h-[600px] md:h-[700px] flex items-center justify-center overflow-hidden">
                 
-                <div class="hero-slide absolute inset-0 transition-opacity duration-1000 ease-in-out opacity-100 z-10">
-                    <div class="absolute inset-0 bg-cover bg-center opacity-60" style="background-image: url('images/summit-rinjani.jpg');"></div>
-                    <div class="absolute inset-0 flex flex-col items-center justify-center px-4 text-center">
-                        <h2 class="font-script text-4xl md:text-6xl text-white mb-2 drop-shadow-md transform translate-y-4 animate-fade-in-up">Explore</h2>
-                        <h1 class="font-heading font-extrabold text-5xl md:text-8xl text-white tracking-wider mb-4 drop-shadow-lg">MOUNT RINJANI</h1>
-                        <p class="text-white text-lg md:text-xl tracking-widest uppercase font-semibold drop-shadow-md">The Ultimate Volcano Trekking Adventure in Lombok!</p>
-                    </div>
-                </div>
+                <div class="absolute inset-0 bg-cover bg-center opacity-40 z-0" style="background-image: url('images/summit-rinjani.jpg');"></div>
+                
+                <div class="relative z-10 text-center px-4 max-w-4xl mx-auto mt-16 md:mt-0">
+                    
+                    <h1 class="font-heading font-extrabold text-4xl md:text-6xl lg:text-7xl text-white tracking-tight mb-4 drop-shadow-lg leading-tight">
+                        Conquer Mount Rinjani <br>
+                        <span class="text-primary text-5xl md:text-7xl lg:text-8xl block mt-2">with Local Experts</span>
+                    </h1>
+                    
+                    <p class="text-gray-200 text-lg md:text-xl mb-8 max-w-2xl mx-auto drop-shadow-md leading-relaxed">
+                        <strong class="text-white bg-red-600 px-2 py-1 rounded text-sm uppercase tracking-wider mr-2">Open Now</strong>
+                        The 2026 trekking season is officially here! Join our top-rated eco-friendly tours. Safe, affordable, and guided by experienced Senaru locals.
+                    </p>
 
-                <div class="hero-slide absolute inset-0 transition-opacity duration-1000 ease-in-out opacity-0 z-0">
-                    <div class="absolute inset-0 bg-cover bg-center opacity-60" style="background-image: url('images/danau-segaraanak.jpg');"></div>
-                    <div class="absolute inset-0 flex flex-col items-center justify-center px-4 text-center">
-                        <h2 class="font-script text-4xl md:text-6xl text-white mb-2 drop-shadow-md">Discover</h2>
-                        <h1 class="font-heading font-extrabold text-5xl md:text-8xl text-white tracking-wider mb-4 drop-shadow-lg">SEGARA ANAK</h1>
-                        <p class="text-white text-lg md:text-xl tracking-widest uppercase font-semibold drop-shadow-md">Relax in the Healing Magic of Natural Hot Springs</p>
+                    <div class="flex flex-col md:flex-row justify-center items-center space-y-3 md:space-y-0 md:space-x-6 mb-10">
+                        <div class="flex items-center text-white bg-black/30 px-4 py-2 rounded-full backdrop-blur-sm border border-white/20">
+                            <i class="fas fa-check-circle text-green-400 mr-2"></i>
+                            <span class="text-sm font-medium">100% Local Guides</span>
+                        </div>
+                        <div class="flex items-center text-white bg-black/30 px-4 py-2 rounded-full backdrop-blur-sm border border-white/20">
+                            <i class="fas fa-check-circle text-green-400 mr-2"></i>
+                            <span class="text-sm font-medium">Easy WeChat/WA Booking</span>
+                        </div>
+                        <div class="flex items-center text-white bg-black/30 px-4 py-2 rounded-full backdrop-blur-sm border border-white/20">
+                            <i class="fas fa-check-circle text-green-400 mr-2"></i>
+                            <span class="text-sm font-medium">Free Basecamp Laundry</span>
+                        </div>
                     </div>
-                </div>
 
-                <div class="hero-slide absolute inset-0 transition-opacity duration-1000 ease-in-out opacity-0 z-0">
-                    <div class="absolute inset-0 bg-cover bg-center opacity-60" style="background-image: url('images/pelawangan-sembalun.jpg');"></div>
-                    <div class="absolute inset-0 flex flex-col items-center justify-center px-4 text-center">
-                        <h2 class="font-script text-4xl md:text-6xl text-white mb-2 drop-shadow-md">Wander</h2>
-                        <h1 class="font-heading font-extrabold text-5xl md:text-8xl text-white tracking-wider mb-4 drop-shadow-lg">MAJESTIC SAVANNA</h1>
-                        <p class="text-white text-lg md:text-xl tracking-widest uppercase font-semibold drop-shadow-md">Walk Through the Golden Hills of Sembalun</p>
+                    <div class="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-6">
+                        <button onclick="navigate('booking')" class="w-full sm:w-auto bg-green-500 hover:bg-green-600 text-white px-8 py-4 rounded-full font-bold text-lg transition shadow-[0_0_15px_rgba(34,197,94,0.4)] flex justify-center items-center">
+                            <i class="fab fa-whatsapp mr-2"></i> Book Your Trek Now
+                        </button>
+                        <button onclick="navigate('packages')" class="w-full sm:w-auto bg-transparent hover:bg-white/10 text-white border-2 border-white px-8 py-4 rounded-full font-bold text-lg transition flex justify-center items-center backdrop-blur-sm">
+                            Explore Packages
+                        </button>
                     </div>
-                </div>
 
-                <div class="hero-slide absolute inset-0 transition-opacity duration-1000 ease-in-out opacity-0 z-0">
-                    <div class="absolute inset-0 bg-cover bg-center opacity-60" style="background-image: url('images/via-senaru.jpg');"></div>
-                    <div class="absolute inset-0 flex flex-col items-center justify-center px-4 text-center">
-                        <h2 class="font-script text-4xl md:text-6xl text-white mb-2 drop-shadow-md">Experience</h2>
-                        <h1 class="font-heading font-extrabold text-5xl md:text-8xl text-white tracking-wider mb-4 drop-shadow-lg">TROPICAL TRAILS</h1>
-                        <p class="text-white text-lg md:text-xl tracking-widest uppercase font-semibold drop-shadow-md">Hike the Classic, Shaded Senaru Rainforest Route</p>
-                    </div>
                 </div>
-
-                <div class="hero-slide absolute inset-0 transition-opacity duration-1000 ease-in-out opacity-0 z-0">
-                    <div class="absolute inset-0 bg-cover bg-center opacity-60" style="background-image: url('images/makan-siang.jpg');"></div>
-                    <div class="absolute inset-0 flex flex-col items-center justify-center px-4 text-center">
-                        <h2 class="font-script text-4xl md:text-6xl text-white mb-2 drop-shadow-md">Trek With</h2>
-                        <h1 class="font-heading font-extrabold text-5xl md:text-8xl text-white tracking-wider mb-4 drop-shadow-lg">LOCAL EXPERTS</h1>
-                        <p class="text-white text-lg md:text-xl tracking-widest uppercase font-semibold drop-shadow-md">100% Eco-Friendly Guides & Premium Comfort</p>
-                    </div>
-                </div>
-
-                <div class="absolute bottom-28 md:bottom-24 left-0 right-0 flex justify-center space-x-3 z-20">
-                    <button class="slider-dot w-3 h-3 rounded-full bg-white opacity-100 focus:outline-none transition-opacity duration-300 shadow-md" onclick="goToSlide(0)"></button>
-                    <button class="slider-dot w-3 h-3 rounded-full bg-white opacity-40 hover:opacity-100 focus:outline-none transition-opacity duration-300 shadow-md" onclick="goToSlide(1)"></button>
-                    <button class="slider-dot w-3 h-3 rounded-full bg-white opacity-40 hover:opacity-100 focus:outline-none transition-opacity duration-300 shadow-md" onclick="goToSlide(2)"></button>
-                    <button class="slider-dot w-3 h-3 rounded-full bg-white opacity-40 hover:opacity-100 focus:outline-none transition-opacity duration-300 shadow-md" onclick="goToSlide(3)"></button>
-                    <button class="slider-dot w-3 h-3 rounded-full bg-white opacity-40 hover:opacity-100 focus:outline-none transition-opacity duration-300 shadow-md" onclick="goToSlide(4)"></button>
-                </div>
+            </div>
+            
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16 relative z-20 -mt-20">
 
                 <a href="laundry-service.html" class="absolute bottom-10 md:bottom-16 right-4 md:right-10 z-30 bg-white/90 backdrop-blur-md border-l-4 border-secondary p-4 rounded-2xl shadow-2xl flex items-center gap-4 hover:scale-105 transition-transform duration-300 max-w-[280px] md:max-w-xs cursor-pointer group animate-bounce-slow">
                     <div class="bg-blue-50 p-3 rounded-full text-primary group-hover:bg-primary group-hover:text-white transition-colors shadow-inner">
