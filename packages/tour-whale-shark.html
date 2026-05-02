@@ -1,53 +1,4 @@
-<!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Whale Shark Sumbawa Tour | Rinjani Trekking Pro</title>
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Playball&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        sans: ['Poppins', 'sans-serif'],
-                        heading: ['Montserrat', 'sans-serif'],
-                        script: ['Playball', 'cursive'],
-                    },
-                    colors: {
-                        primary: '#0275d8', 
-                        secondary: '#5bc0de', 
-                        accent: '#4CAF50', 
-                        dark: '#1e293b',
-                    }
-                }
-            }
-        }
-    </script>
-    <style>
-        .detail-card {
-            background: #ffffff;
-            border-radius: 16px;
-            padding: 30px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
-            border-top: 5px solid transparent;
-        }
-        .includes-card { border-top-color: #22c55e; }
-        .excludes-card { border-top-color: #ef4444; }
-        .detail-card ul li { padding: 10px 0; color: #475569; font-size: 15px; display: flex; align-items: flex-start; }
-        .includes-card ul li::before { content: '\f00c'; font-family: 'Font Awesome 6 Free'; font-weight: 900; color: #22c55e; margin-right: 12px; }
-        .excludes-card ul li::before { content: '\f00d'; font-family: 'Font Awesome 6 Free'; font-weight: 900; color: #ef4444; margin-right: 12px; }
-    </style>
-</head>
-<body class="bg-slate-50 text-gray-800 font-sans antialiased">
-
-   <!-- Hero Section -->
+<!-- Hero Section (Kode Anda) -->
     <section class="relative h-[60vh] min-h-[400px] flex items-center justify-center overflow-hidden">
         
         <!-- TOMBOL KEMBALI KE HOME -->
@@ -57,8 +8,6 @@
 
         <div class="absolute inset-0 bg-blue-900/50 z-10"></div>
         
-        <!-- Perbaikan path gambar: pastikan letak foldernya benar. 
-             Jika gambar ada di folder images utama, gunakan ../images/nama-gambar.jpg -->
         <img src="../images/whale-shark-sumbawa.jpg" alt="Whale Shark Saleh Bay Sumbawa" class="absolute inset-0 w-full h-full object-cover z-0">
         
         <div class="relative z-20 text-center px-4 max-w-4xl mx-auto mt-16">
@@ -68,135 +17,191 @@
         </div>
     </section>
 
-    <!-- Tour Overview & Quick Facts -->
-    <section class="max-w-7xl mx-auto px-4 py-16 -mt-10 relative z-30">
-        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            
-            <!-- Quick Facts Card -->
-            <div class="bg-white rounded-[2rem] shadow-xl p-8 lg:col-span-1 border border-gray-100 h-fit">
-                <h3 class="font-heading font-bold text-2xl text-dark mb-6 border-b pb-4">Tour Highlights</h3>
-                <ul class="space-y-5">
-                    <li class="flex items-center">
-                        <div class="w-10 h-10 rounded-full bg-blue-50 text-primary flex items-center justify-center mr-4">
-                            <i class="far fa-clock"></i>
-                        </div>
-                        <div>
-                            <p class="text-xs text-gray-500 font-bold uppercase">Duration</p>
-                            <p class="text-dark font-medium">1 Full Day (Early Start)</p>
-                        </div>
-                    </li>
-                    <li class="flex items-center">
-                        <div class="w-10 h-10 rounded-full bg-green-50 text-green-500 flex items-center justify-center mr-4">
-                            <i class="fas fa-map-marker-alt"></i>
-                        </div>
-                        <div>
-                            <p class="text-xs text-gray-500 font-bold uppercase">Location</p>
-                            <p class="text-dark font-medium">Saleh Bay, Sumbawa</p>
-                        </div>
-                    </li>
-                    <li class="flex items-center">
-                        <div class="w-10 h-10 rounded-full bg-secondary/20 text-secondary flex items-center justify-center mr-4">
-                            <i class="fas fa-swimmer"></i>
-                        </div>
-                        <div>
-                            <p class="text-xs text-gray-500 font-bold uppercase">Activity</p>
-                            <p class="text-dark font-medium">Snorkeling & Boating</p>
-                        </div>
-                    </li>
-                </ul>
-                <div class="mt-8 pt-6 border-t">
-                    <p class="text-gray-500 text-sm mb-2">Prices starting from</p>
-                    <p class="text-3xl font-extrabold text-primary mb-6">Ask Us <span class="text-sm text-gray-500 font-normal">/pax</span></p>
-                    <a href="https://wa.me/6285933150749?text=Hello%20Rinjani%20Trekking%20Pro,%20I%20want%20to%20know%20more%20about%20the%20Whale%20Shark%20Sumbawa%20Tour." target="_blank" class="block w-full bg-green-500 hover:bg-green-600 text-white text-center py-4 rounded-xl font-bold transition shadow-lg">
-                        <i class="fab fa-whatsapp mr-2"></i> Inquire Now
-                    </a>
+    <!-- CONTENT SECTION -->
+    <main class="bg-slate-50 py-16">
+        
+        <!-- Sumbawa Whale Shark Open Trip Packages -->
+        <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-16">
+            <div class="flex justify-between items-center mb-8">
+                <h2 class="font-heading font-bold text-2xl md:text-3xl text-dark">Sumbawa Whale Shark Open Trip Packages</h2>
+                <div class="hidden md:flex space-x-3">
+                    <button class="w-10 h-10 rounded-full border border-gray-200 flex items-center justify-center bg-white hover:bg-gray-50 shadow-sm transition"><i class="fas fa-chevron-left text-gray-500"></i></button>
+                    <button class="w-10 h-10 rounded-full border border-gray-200 flex items-center justify-center bg-white hover:bg-gray-50 shadow-sm transition"><i class="fas fa-chevron-right text-gray-500"></i></button>
                 </div>
             </div>
 
-            <!-- Description & Itinerary -->
-            <div class="lg:col-span-2">
-                <div class="bg-white rounded-[2rem] shadow-xl p-8 md:p-12 border border-gray-100">
-                    <h2 class="font-heading font-bold text-3xl text-dark mb-4">About This Adventure</h2>
-                    <p class="text-gray-600 leading-relaxed mb-6">
-                        Trade the high altitudes of Mount Rinjani for the deep blue waters of Sumbawa. Saleh Bay is one of the few places in the world where you can sustainably swim alongside magnificent, wild Whale Sharks in their natural habitat.
-                    </p>
-                    <p class="text-gray-600 leading-relaxed mb-10">
-                        This is a truly magical, once-in-a-lifetime marine encounter. Our expert local guides ensure a respectful and eco-friendly interaction with these gentle giants as they surface to feed at dawn.
-                    </p>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Card 1 -->
+                <div class="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden hover:shadow-md transition duration-300">
+                    <div class="h-48 overflow-hidden">
+                        <img src="../images/open-trip-labuan-jambu.jpg" alt="Whale Shark Boat" class="w-full h-full object-cover hover:scale-110 transition duration-500">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-bold text-lg text-dark mb-6 leading-snug h-12">Sumbawa Whale Shark Open Trip Start From Labuan Jambu</h3>
+                        <p class="text-sm font-bold text-gray-600">Start <span class="text-red-500 text-lg ml-1 mr-1">IDR 650.000</span> Per Person</p>
+                    </div>
+                </div>
 
-                    <h3 class="font-heading font-bold text-2xl text-dark mb-8">Typical Itinerary</h3>
-                    
-                    <div class="relative border-l-2 border-blue-100 ml-3 md:ml-4 space-y-10 pb-8">
-                        
-                        <div class="relative pl-8 md:pl-10">
-                            <div class="absolute -left-[11px] top-1 w-5 h-5 rounded-full bg-primary border-4 border-white shadow"></div>
-                            <span class="text-sm font-bold text-primary mb-1 block">11:00 PM (Previous Night)</span>
-                            <h4 class="text-lg font-bold text-dark mb-2">Lombok Departure</h4>
-                            <p class="text-gray-600 text-sm">Late-night pick up from your hotel in Lombok. We will drive to Kayangan Port and take the midnight ferry crossing to Sumbawa Island.</p>
-                        </div>
-
-                        <div class="relative pl-8 md:pl-10">
-                            <div class="absolute -left-[11px] top-1 w-5 h-5 rounded-full bg-secondary border-4 border-white shadow"></div>
-                            <span class="text-sm font-bold text-secondary mb-1 block">04:00 AM</span>
-                            <h4 class="text-lg font-bold text-dark mb-2">Sail to Saleh Bay</h4>
-                            <p class="text-gray-600 text-sm">Arrive at the harbor in Sumbawa and board our private charter boat. Enjoy the calm night breeze as we sail towards the whale shark point.</p>
-                        </div>
-
-                        <div class="relative pl-8 md:pl-10">
-                            <div class="absolute -left-[11px] top-1 w-5 h-5 rounded-full bg-primary border-4 border-white shadow"></div>
-                            <span class="text-sm font-bold text-primary mb-1 block">06:00 AM</span>
-                            <h4 class="text-lg font-bold text-dark mb-2">Sunrise & Whale Shark Encounter</h4>
-                            <p class="text-gray-600 text-sm">As the sun rises, jump into the water! Swim respectfully alongside the majestic whale sharks as they feed around the local fishing platforms (Bagan).</p>
-                        </div>
-
-                        <div class="relative pl-8 md:pl-10">
-                            <div class="absolute -left-[11px] top-1 w-5 h-5 rounded-full bg-secondary border-4 border-white shadow"></div>
-                            <span class="text-sm font-bold text-secondary mb-1 block">08:30 AM</span>
-                            <h4 class="text-lg font-bold text-dark mb-2">Breakfast on Boat</h4>
-                            <p class="text-gray-600 text-sm">Warm up with hot coffee or tea and a delicious local breakfast served freshly on the boat while cruising back to the mainland.</p>
-                        </div>
-
-                        <div class="relative pl-8 md:pl-10">
-                            <div class="absolute -left-[11px] top-1 w-5 h-5 rounded-full bg-dark border-4 border-white shadow"></div>
-                            <span class="text-sm font-bold text-dark mb-1 block">03:00 PM</span>
-                            <h4 class="text-lg font-bold text-dark mb-2">Return to Lombok</h4>
-                            <p class="text-gray-600 text-sm">Arrive safely back at your hotel in Lombok, bringing home unforgettable memories of the gentle giants.</p>
-                        </div>
-
+                <!-- Card 2 -->
+                <div class="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden hover:shadow-md transition duration-300">
+                    <div class="h-48 overflow-hidden">
+                        <img src="../images/open-trip-lombok.jpg" alt="Whale Shark Snorkeling" class="w-full h-full object-cover hover:scale-110 transition duration-500">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-bold text-lg text-dark mb-6 leading-snug h-12">Sumbawa Whale Shark Open Trip Start From Lombok</h3>
+                        <p class="text-sm font-bold text-gray-600">Start <span class="text-red-500 text-lg ml-1 mr-1">IDR 2.390.000</span> Per Person</p>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Included / Excluded Section -->
-    <section class="max-w-7xl mx-auto px-4 pb-20">
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-            
-            <div class="detail-card includes-card">
-                <h4 class="font-heading text-xl font-bold text-dark mb-6 border-b pb-4">What's Included</h4>
-                <ul>
-                    <li>Return AC transport from Lombok</li>
-                    <li>Return Ferry tickets (Lombok - Sumbawa)</li>
-                    <li>Private charter boat to Saleh Bay</li>
-                    <li>Snorkeling gear (Mask & Life Jacket)</li>
-                    <li>Entrance fees & local guide</li>
-                    <li>Breakfast & Mineral Water</li>
-                </ul>
-            </div>
-            
-            <div class="detail-card excludes-card">
-                <h4 class="font-heading text-xl font-bold text-dark mb-6 border-b pb-4">What's Excluded</h4>
-                <ul>
-                    <li>Personal travel insurance</li>
-                    <li>Lunch & Dinner</li>
-                    <li>GoPro / Underwater camera rental</li>
-                    <li>Tips for boat crew & guides</li>
-                </ul>
+        <!-- Sumbawa Whale Shark 1-Day Packages -->
+        <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-16">
+            <div class="flex justify-between items-center mb-8">
+                <h2 class="font-heading font-bold text-2xl md:text-3xl text-dark">Sumbawa Whale Shark 1-Day Packages</h2>
+                <div class="hidden md:flex space-x-3">
+                    <button class="w-10 h-10 rounded-full border border-gray-200 flex items-center justify-center bg-white hover:bg-gray-50 shadow-sm transition"><i class="fas fa-chevron-left text-gray-500"></i></button>
+                    <button class="w-10 h-10 rounded-full border border-gray-200 flex items-center justify-center bg-white hover:bg-gray-50 shadow-sm transition"><i class="fas fa-chevron-right text-gray-500"></i></button>
+                </div>
             </div>
 
-        </div>
-    </section>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Card 1 -->
+                <div class="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden hover:shadow-md transition duration-300">
+                    <div class="h-48 overflow-hidden">
+                        <img src="../images/1day-sumbawa-besar.jpg" alt="Whale Shark" class="w-full h-full object-cover hover:scale-110 transition duration-500">
+                    </div>
+                    <div class="p-6 flex flex-col justify-between">
+                        <h3 class="font-bold text-lg text-dark mb-6 leading-snug h-14">Sumbawa Whale Shark Tour (Start & Finish Sumbawa Besar)</h3>
+                        <p class="text-sm font-bold text-gray-600">Start <span class="text-red-500 text-lg ml-1 mr-1">IDR 790.000</span> Per Person</p>
+                    </div>
+                </div>
 
-</body>
-</html>
+                <!-- Card 2 -->
+                <div class="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden hover:shadow-md transition duration-300">
+                    <div class="h-48 overflow-hidden">
+                        <img src="../images/1day-labuan-jambu.jpg" alt="Saleh Bay Whale Shark" class="w-full h-full object-cover hover:scale-110 transition duration-500">
+                    </div>
+                    <div class="p-6 flex flex-col justify-between">
+                        <h3 class="font-bold text-lg text-dark mb-6 leading-snug h-14">Saleh Bay Whale Shark Tour from Labuan Jambu Village</h3>
+                        <p class="text-sm font-bold text-gray-600">Start <span class="text-red-500 text-lg ml-1 mr-1">IDR 610.000</span> Per Person</p>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden hover:shadow-md transition duration-300">
+                    <div class="h-48 overflow-hidden">
+                        <img src="../images/1day-speedboat.jpg" alt="Speedboat Whale Shark" class="w-full h-full object-cover hover:scale-110 transition duration-500">
+                    </div>
+                    <div class="p-6 flex flex-col justify-between">
+                        <h3 class="font-bold text-lg text-dark mb-6 leading-snug h-14">Whale Shark Tour from Sumbawa Besar (Use Speed Boat)</h3>
+                        <p class="text-sm font-bold text-gray-600">Start <span class="text-red-500 text-lg ml-1 mr-1">IDR 1.310.000</span> Per Person</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sumbawa Whale Shark 2D1N Packages -->
+        <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-20">
+            <div class="flex justify-between items-center mb-8">
+                <h2 class="font-heading font-bold text-2xl md:text-3xl text-dark">Sumbawa Whale Shark 2D1N Packages</h2>
+                <div class="hidden md:flex space-x-3">
+                    <button class="w-10 h-10 rounded-full border border-gray-200 flex items-center justify-center bg-white hover:bg-gray-50 shadow-sm transition"><i class="fas fa-chevron-left text-gray-500"></i></button>
+                    <button class="w-10 h-10 rounded-full border border-gray-200 flex items-center justify-center bg-white hover:bg-gray-50 shadow-sm transition"><i class="fas fa-chevron-right text-gray-500"></i></button>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Card 1 -->
+                <div class="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden hover:shadow-md transition duration-300">
+                    <div class="h-48 overflow-hidden">
+                        <img src="../images/2d1n-lombok.jpg" alt="Whale Shark Bagan" class="w-full h-full object-cover hover:scale-110 transition duration-500">
+                    </div>
+                    <div class="p-6 flex flex-col justify-between">
+                        <h3 class="font-bold text-lg text-dark mb-6 leading-snug h-14">2D1N Sumbawa Whale Shark Tour (Start & Finish Lombok)</h3>
+                        <p class="text-sm font-bold text-gray-600">Start <span class="text-red-500 text-lg ml-1 mr-1">IDR 1.240.000</span> Per Person</p>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden hover:shadow-md transition duration-300">
+                    <div class="h-48 overflow-hidden">
+                        <img src="../images/2d1n-poto-tano.jpg" alt="Whale Shark Poto Tano" class="w-full h-full object-cover hover:scale-110 transition duration-500">
+                    </div>
+                    <div class="p-6 flex flex-col justify-between">
+                        <h3 class="font-bold text-lg text-dark mb-6 leading-snug h-14">2D1N Whale Shark Tour Sumbawa (Start & Finish in Poto Tano Area)</h3>
+                        <p class="text-sm font-bold text-gray-600">Start <span class="text-red-500 text-lg ml-1 mr-1">IDR 1.160.000</span> Per Person</p>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden hover:shadow-md transition duration-300">
+                    <div class="h-48 overflow-hidden">
+                        <img src="../images/2d1n-sekongkang.jpg" alt="Whale Shark Sekongkang" class="w-full h-full object-cover hover:scale-110 transition duration-500">
+                    </div>
+                    <div class="p-6 flex flex-col justify-between">
+                        <h3 class="font-bold text-lg text-dark mb-6 leading-snug h-14">2D1N Whale Shark Tour Sumbawa (Start & Finish in Sekongkang Area)</h3>
+                        <p class="text-sm font-bold text-gray-600">Start <span class="text-red-500 text-lg ml-1 mr-1">IDR 1.240.000</span> Per Person</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <hr class="max-w-7xl mx-auto border-gray-200 mb-20">
+
+        <!-- Advantages Section -->
+        <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-16">
+            <h2 class="font-heading font-bold text-2xl md:text-3xl text-dark mb-10 text-center md:text-left">Advantages of the Whale Shark Sumbawa Tour Package</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Item 1 -->
+                <div class="bg-white rounded-2xl border border-gray-100 p-8 text-center hover:shadow-xl hover:-translate-y-1 transition duration-300">
+                    <h4 class="font-bold text-dark text-lg mb-4">Private Trip & Open Trip Options</h4>
+                    <p class="text-gray-600 text-sm leading-relaxed">
+                        Two options are available: <strong>private trip</strong> (exclusive for you and your group) and <strong>open trip</strong> (shared trip based on scheduled departures) starting from Labuan Jambu or Lombok.
+                    </p>
+                </div>
+
+                <!-- Item 2 -->
+                <div class="bg-white rounded-2xl border border-gray-100 p-8 text-center hover:shadow-xl hover:-translate-y-1 transition duration-300">
+                    <h4 class="font-bold text-dark text-lg mb-4">Prime Location in Saleh Bay</h4>
+                    <p class="text-gray-600 text-sm leading-relaxed">
+                        Saleh Bay is known for year-round whale shark sightings, as they are attracted to small fish and plankton around traditional fishing platforms (bagan).
+                    </p>
+                </div>
+
+                <!-- Item 3 -->
+                <div class="bg-white rounded-2xl border border-gray-100 p-8 text-center hover:shadow-xl hover:-translate-y-1 transition duration-300">
+                    <h4 class="font-bold text-dark text-lg mb-4">Early Morning Departure for Best Chance</h4>
+                    <p class="text-gray-600 text-sm leading-relaxed">
+                        The program follows the natural appearance time of whale sharks, usually around 6:00 AM when fishermen lift their nets, increasing the chance of sightings.
+                    </p>
+                </div>
+
+                <!-- Item 4 -->
+                <div class="bg-white rounded-2xl border border-gray-100 p-8 text-center hover:shadow-xl hover:-translate-y-1 transition duration-300">
+                    <h4 class="font-bold text-dark text-lg mb-4">Organized & Safety-Oriented Program</h4>
+                    <p class="text-gray-600 text-sm leading-relaxed">
+                        The package includes an experienced guide, proper snorkeling gear, and clear safety briefings to ensure a secure, sustainable, and enjoyable experience in the water.
+                    </p>
+                </div>
+
+                <!-- Item 5 -->
+                <div class="bg-white rounded-2xl border border-gray-100 p-8 text-center hover:shadow-xl hover:-translate-y-1 transition duration-300">
+                    <h4 class="font-bold text-dark text-lg mb-4">Multiple Starting Points Available</h4>
+                    <p class="text-gray-600 text-sm leading-relaxed">
+                        Tours can start from Labuan Jambu, Sumbawa Besar, or Lombok (ideal for those combining with Mount Rinjani treks), offering maximum travel flexibility.
+                    </p>
+                </div>
+
+                <!-- Item 6 -->
+                <div class="bg-white rounded-2xl border border-gray-100 p-8 text-center hover:shadow-xl hover:-translate-y-1 transition duration-300">
+                    <h4 class="font-bold text-dark text-lg mb-4">Can Be Combined with Other Destinations</h4>
+                    <p class="text-gray-600 text-sm leading-relaxed">
+                        The whale shark tour can be seamlessly integrated with extended visits to Moyo Island, Kenawa Island, or post-trekking recovery tours in Lombok.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+    </main>
