@@ -47,16 +47,24 @@
 </head>
 <body class="bg-slate-50 text-gray-800 font-sans antialiased">
 
-    <!-- Hero Section -->
+   <!-- Hero Section -->
     <section class="relative h-[60vh] min-h-[400px] flex items-center justify-center overflow-hidden">
+        
+        <!-- TOMBOL KEMBALI KE HOME -->
+        <a href="../index.html" class="absolute top-6 left-4 md:top-8 md:left-8 z-50 inline-flex items-center bg-white/20 hover:bg-white/40 backdrop-blur-md text-white px-5 py-2.5 rounded-full font-semibold transition duration-300 border border-white/30 shadow-lg">
+            <i class="fas fa-arrow-left mr-2"></i> Back to Home
+        </a>
+
         <div class="absolute inset-0 bg-blue-900/50 z-10"></div>
-        <!-- Siapkan gambar hiu paus di folder images Anda -->
-        <img src="packages/shark-sumbawa.jpg" alt="Whale Shark Saleh Bay Sumbawa" class="absolute inset-0 w-full h-full object-cover z-0">
+        
+        <!-- Perbaikan path gambar: pastikan letak foldernya benar. 
+             Jika gambar ada di folder images utama, gunakan ../images/nama-gambar.jpg -->
+        <img src="../images/whale-shark-sumbawa.jpg" alt="Whale Shark Saleh Bay Sumbawa" class="absolute inset-0 w-full h-full object-cover z-0">
         
         <div class="relative z-20 text-center px-4 max-w-4xl mx-auto mt-16">
             <span class="text-white bg-primary px-3 py-1 rounded-full text-sm font-bold tracking-wider uppercase mb-4 inline-block">Premium Marine Tour</span>
             <h1 class="font-heading font-extrabold text-4xl md:text-6xl text-white drop-shadow-lg mb-4">Swim with Whale Sharks</h1>
-            <p class="text-blue-100 text-lg md:text-xl drop-shadow-md">An unforgettable majestic encounter in Rinjani Trekking Pro, Sumbawa.</p>
+            <p class="text-blue-100 text-lg md:text-xl drop-shadow-md">An unforgettable majestic encounter in Saleh Bay, Sumbawa.</p>
         </div>
     </section>
 
