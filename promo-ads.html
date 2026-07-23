@@ -100,7 +100,7 @@
         </div>
     </section>
 
-    <!-- TRUST BADGES SECTION (Google + TripAdvisor Terlihat Jelas) -->
+    <!-- TRUST BADGES SECTION -->
     <section class="py-4 bg-gray-100 border-b border-gray-200">
         <div class="max-w-6xl mx-auto px-4 flex flex-wrap justify-center items-center gap-6 md:gap-10 text-center text-xs md:text-sm font-semibold text-gray-700">
             <a href="https://share.google/yedGzIssyGBslsOiN" target="_blank" class="flex items-center space-x-2 hover:text-blue-600 transition">
@@ -146,7 +146,7 @@
         </div>
     </section>
 
-    <!-- PACKAGES SECTION -->
+    <!-- PACKAGES SECTION (LENGKAP TOMBOL VIEW ITINERARY) -->
     <section id="packages" class="py-12 bg-gray-100">
         <div class="max-w-6xl mx-auto px-4">
             <div class="text-center mb-10">
@@ -169,11 +169,14 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="p-5 border-t border-gray-100">
+                    <div class="p-5 border-t border-gray-100 space-y-2">
+                        <button onclick="toggleModal('modal-2d1n')" class="block w-full bg-gray-100 hover:bg-gray-200 text-gray-800 font-bold text-center py-2 rounded-full text-xs border border-gray-300">
+                            <i class="fas fa-list-ul mr-1"></i> View Itinerary
+                        </button>
                         <a href="https://wa.me/6285933150749?text=Hello%20Admin,%20I%20am%20interested%20in%20the%202D1N%20Summit%20Package." 
                            onclick="return gtag_report_conversion('https://wa.me/6285933150749?text=Hello%20Admin,%20I%20am%20interested%20in%20the%202D1N%20Summit%20Package.');"
                            target="_blank" 
-                           class="block w-full bg-blue-600 hover:bg-blue-700 text-white font-bold text-center py-2.5 rounded-full text-xs">
+                           class="block w-full bg-blue-600 hover:bg-blue-700 text-white font-bold text-center py-2.5 rounded-full text-xs shadow">
                             Inquire Details via WA
                         </a>
                     </div>
@@ -194,11 +197,14 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="p-5 border-t border-gray-100">
+                    <div class="p-5 border-t border-gray-100 space-y-2">
+                        <button onclick="toggleModal('modal-3d2n')" class="block w-full bg-gray-100 hover:bg-gray-200 text-gray-800 font-bold text-center py-2 rounded-full text-xs border border-gray-300">
+                            <i class="fas fa-list-ul mr-1"></i> View Itinerary
+                        </button>
                         <a href="https://wa.me/6285933150749?text=Hello%20Admin,%20I%20would%20like%20to%20ask%20about%20the%203D2N%20Lake%20%26%20Summit%20Package." 
-                           onclick="return gtag_report_conversion('https://wa.me/6285933150749?text=Hello%20Admin,%20I%20would%20like%20to%20ask%20about%20the%203D2N%20Lake%20%26%20Summit%20Package.');"
+                           onclick="return gtag_report_conversion('https://wa.me/6285933150749?text=Halo%20Admin,%20I%20would%20like%20to%20ask%20about%20the%203D2N%20Lake%20%26%20Summit%20Package.');"
                            target="_blank" 
-                           class="block w-full bg-green-500 hover:bg-green-600 text-white font-bold text-center py-2.5 rounded-full text-xs">
+                           class="block w-full bg-green-500 hover:bg-green-600 text-white font-bold text-center py-2.5 rounded-full text-xs shadow">
                             Inquire Details via WA
                         </a>
                     </div>
@@ -218,11 +224,14 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="p-5 border-t border-gray-100">
+                    <div class="p-5 border-t border-gray-100 space-y-2">
+                        <button onclick="toggleModal('modal-4d3n')" class="block w-full bg-gray-100 hover:bg-gray-200 text-gray-800 font-bold text-center py-2 rounded-full text-xs border border-gray-300">
+                            <i class="fas fa-list-ul mr-1"></i> View Itinerary
+                        </button>
                         <a href="https://wa.me/6285933150749?text=Hello%20Admin,%20I%20am%20interested%20in%20the%204D3N%20Exploration%20Package." 
                            onclick="return gtag_report_conversion('https://wa.me/6285933150749?text=Hello%20Admin,%20I%20am%20interested%20in%20the%204D3N%20Exploration%20Package.');"
                            target="_blank" 
-                           class="block w-full bg-blue-600 hover:bg-blue-700 text-white font-bold text-center py-2.5 rounded-full text-xs">
+                           class="block w-full bg-blue-600 hover:bg-blue-700 text-white font-bold text-center py-2.5 rounded-full text-xs shadow">
                             Inquire Details via WA
                         </a>
                     </div>
@@ -241,7 +250,6 @@
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-xs text-gray-600 mb-8">
-                <!-- Google Review -->
                 <div class="p-5 bg-gray-50 rounded-xl border border-gray-200 flex flex-col justify-between">
                     <div>
                         <div class="flex items-center justify-between mb-3">
@@ -259,7 +267,6 @@
                     </div>
                 </div>
 
-                <!-- TripAdvisor Review -->
                 <div class="p-5 bg-green-50/50 rounded-xl border border-green-200 flex flex-col justify-between">
                     <div>
                         <div class="flex items-center justify-between mb-3">
@@ -277,7 +284,6 @@
                     </div>
                 </div>
 
-                <!-- Google Review 2 -->
                 <div class="p-5 bg-gray-50 rounded-xl border border-gray-200 flex flex-col justify-between">
                     <div>
                         <div class="flex items-center justify-between mb-3">
@@ -296,7 +302,6 @@
                 </div>
             </div>
 
-            <!-- TOMBOL DIRECT LINK LINK GOOGLE & TRIPADVISOR -->
             <div class="flex flex-col sm:flex-row justify-center items-center gap-3">
                 <a href="https://share.google/yedGzIssyGBslsOiN" target="_blank" class="w-full sm:w-auto inline-flex items-center justify-center bg-gray-100 hover:bg-gray-200 text-gray-800 px-6 py-2.5 rounded-full font-bold text-xs border border-gray-300 transition shadow-sm">
                     <i class="fab fa-google text-red-500 mr-2 text-sm"></i> Read Google Reviews
@@ -351,6 +356,102 @@
         <i class="fab fa-whatsapp text-2xl"></i>
         <span class="font-bold text-xs hidden sm:inline">Chat via WhatsApp</span>
     </a>
+
+    <!-- ==================== POPUP MODALS FOR ITINERARIES ==================== -->
+
+    <!-- Modal 2D1N -->
+    <div id="modal-2d1n" class="fixed inset-0 bg-black bg-opacity-60 z-50 hidden flex items-center justify-center p-4">
+        <div class="bg-white rounded-2xl max-w-md w-full p-6 relative max-h-[85vh] overflow-y-auto">
+            <button onclick="toggleModal('modal-2d1n')" class="absolute top-4 right-4 text-gray-400 hover:text-gray-700 font-bold text-lg">&times;</button>
+            <h3 class="font-bold text-lg text-gray-900 mb-1">2D1N Summit Trek Itinerary</h3>
+            <p class="text-xs text-blue-600 font-semibold mb-4">Sembalun Route - Summit (3,726 m)</p>
+            
+            <div class="space-y-3 text-xs text-gray-600">
+                <div class="border-l-2 border-blue-500 pl-3">
+                    <strong class="text-gray-800 block">Day 1: Basecamp to Sembalun Crater Rim</strong>
+                    <p class="mt-1">07:00 AM transfer to Sembalun, register at park office. Hike through savanna grasslands to Pos 1, 2, and 3. Arrive at Sembalun Crater Rim (2,639m) around 16:30 for camping and sunset view.</p>
+                </div>
+                <div class="border-l-2 border-green-500 pl-3">
+                    <strong class="text-gray-800 block">Day 2: Summit Push & Descent to Sembalun</strong>
+                    <p class="mt-1">02:00 AM wake up call & light breakfast. Summit attack to 3,726m for sunrise. Return to camp for breakfast, then descend back to Sembalun Village (Finish around 14:00 PM).</p>
+                </div>
+            </div>
+
+            <div class="mt-6 pt-4 border-t flex justify-end">
+                <button onclick="toggleModal('modal-2d1n')" class="bg-gray-200 text-gray-800 px-4 py-2 rounded-full font-bold text-xs">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 3D2N -->
+    <div id="modal-3d2n" class="fixed inset-0 bg-black bg-opacity-60 z-50 hidden flex items-center justify-center p-4">
+        <div class="bg-white rounded-2xl max-w-md w-full p-6 relative max-h-[85vh] overflow-y-auto">
+            <button onclick="toggleModal('modal-3d2n')" class="absolute top-4 right-4 text-gray-400 hover:text-gray-700 font-bold text-lg">&times;</button>
+            <h3 class="font-bold text-lg text-gray-900 mb-1">3D2N Lake & Summit Itinerary</h3>
+            <p class="text-xs text-green-600 font-semibold mb-4">Sembalun Traverse to Senaru Route</p>
+            
+            <div class="space-y-3 text-xs text-gray-600">
+                <div class="border-l-2 border-blue-500 pl-3">
+                    <strong class="text-gray-800 block">Day 1: Sembalun to Crater Rim (Camp 1)</strong>
+                    <p class="mt-1">Hike through Sembalun savanna to Sembalun Crater Rim (2,639m). Overnight camp under the stars.</p>
+                </div>
+                <div class="border-l-2 border-yellow-500 pl-3">
+                    <strong class="text-gray-800 block">Day 2: Summit Push, Segara Anak Lake & Hot Springs (Camp 2)</strong>
+                    <p class="mt-1">02:30 AM summit push. After sunrise, descend to Segara Anak Lake (2,000m). Enjoy natural hot springs, hot lunch, and camp at Senaru Crater Rim or Lake area.</p>
+                </div>
+                <div class="border-l-2 border-green-500 pl-3">
+                    <strong class="text-gray-800 block">Day 3: Crater Rim to Senaru Rainforest (Finish)</strong>
+                    <p class="mt-1">Breakfast with crater view, descend through Senaru tropical rainforest. Arrive at Senaru Gate around 13:00 PM.</p>
+                </div>
+            </div>
+
+            <div class="mt-6 pt-4 border-t flex justify-end">
+                <button onclick="toggleModal('modal-3d2n')" class="bg-gray-200 text-gray-800 px-4 py-2 rounded-full font-bold text-xs">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 4D3N -->
+    <div id="modal-4d3n" class="fixed inset-0 bg-black bg-opacity-60 z-50 hidden flex items-center justify-center p-4">
+        <div class="bg-white rounded-2xl max-w-md w-full p-6 relative max-h-[85vh] overflow-y-auto">
+            <button onclick="toggleModal('modal-4d3n')" class="absolute top-4 right-4 text-gray-400 hover:text-gray-700 font-bold text-lg">&times;</button>
+            <h3 class="font-bold text-lg text-gray-900 mb-1">4D3N Complete Exploration</h3>
+            <p class="text-xs text-purple-600 font-semibold mb-4">Relaxed Pace Full Rinjani Traverse</p>
+            
+            <div class="space-y-3 text-xs text-gray-600">
+                <div class="border-l-2 border-blue-500 pl-3">
+                    <strong class="text-gray-800 block">Day 1: Sembalun to Sembalun Rim</strong>
+                    <p class="mt-1">Relaxed hike from Sembalun to Crater Rim camp (2,639m).</p>
+                </div>
+                <div class="border-l-2 border-yellow-500 pl-3">
+                    <strong class="text-gray-800 block">Day 2: Summit Push & Segara Anak Lake Camp</strong>
+                    <p class="mt-1">Reach Summit 3,726m at sunrise. Descend slowly to Segara Anak Lake. Spend full afternoon relaxing & soaking in hot springs.</p>
+                </div>
+                <div class="border-l-2 border-purple-500 pl-3">
+                    <strong class="text-gray-800 block">Day 3: Lake to Senaru Crater Rim Camp</strong>
+                    <p class="mt-1">Leisurely morning at the lake, trek up to Senaru Crater Rim (2,641m) for spectacular sunset views over Mount Agung Bali.</p>
+                </div>
+                <div class="border-l-2 border-green-500 pl-3">
+                    <strong class="text-gray-800 block">Day 4: Senaru Rim to Senaru Village</strong>
+                    <p class="mt-1">Descend through protected rainforest to Senaru Village (Finish).</p>
+                </div>
+            </div>
+
+            <div class="mt-6 pt-4 border-t flex justify-end">
+                <button onclick="toggleModal('modal-4d3n')" class="bg-gray-200 text-gray-800 px-4 py-2 rounded-full font-bold text-xs">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript Function for Popup Modal -->
+    <script>
+        function toggleModal(modalId) {
+            const modal = document.getElementById(modalId);
+            if (modal) {
+                modal.classList.toggle('hidden');
+            }
+        }
+    </script>
 
 </body>
 </html>
