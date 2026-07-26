@@ -119,15 +119,21 @@
 
     <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
 
-        <!-- OVERVIEW SECTION -->
-        <section class="max-w-4xl mx-auto mb-16">
-            <h2 class="text-2xl md:text-3xl font-extrabold text-dark mb-4">Package Overview</h2>
-            <p class="text-slate-600 leading-relaxed mb-4 text-sm md:text-base">
-                Short on time but hungry for the ultimate challenge? The 2 Days 1 Night Summit package is tailored for fit hikers who want to reach the 3,726m peak of Mount Rinjani. You will ascend via the Sembalun route, hiking through rolling savanna grasslands and tackling the steep crater rim ascent before making your midnight summit push.
-            </p>
-            <p class="text-slate-600 leading-relaxed text-sm md:text-base">
-                Enjoy a majestic sunset from your crater rim camp, witness an epic sunrise from Lombok's highest point, and experience professional mountain hospitality operating under a strict <strong>100% Zero-Waste policy</strong>.
-            </p>
+        <!-- ROUTE MAP & OVERVIEW (GRID 2 KOLOM PERSIS SCREENSHOT) -->
+        <section class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-center mb-16">
+            <div class="lg:col-span-2">
+                <h2 class="text-2xl md:text-3xl font-extrabold text-dark mb-4">Package Overview</h2>
+                <p class="text-slate-600 leading-relaxed mb-4 text-sm md:text-base">
+                    Short on time but hungry for the ultimate challenge? The 2 Days 1 Night Summit package is tailored for fit hikers who want to reach the 3,726m peak of Mount Rinjani. You will ascend via the Sembalun route, hiking through rolling savanna grasslands and tackling the steep crater rim ascent before making your midnight summit push.
+                </p>
+                <p class="text-slate-600 leading-relaxed text-sm md:text-base">
+                    Enjoy a majestic sunset from your crater rim camp, witness an epic sunrise from Lombok's highest point, and experience professional mountain hospitality operating under a strict <strong>100% Zero-Waste policy</strong>.
+                </p>
+            </div>
+            <div class="bg-white border border-slate-200 rounded-3xl p-3 shadow-lg">
+                <img src="../images/rinjani-route-map.jpg" alt="Rinjani Trekking Route Map 2D1N Summit" class="w-full h-auto rounded-2xl object-cover">
+                <p class="text-center text-xs text-slate-500 font-medium mt-2"><i class="fas fa-map-marked-alt text-amber-500 mr-1"></i> Official RTP Sembalun Summit Trail Map</p>
+            </div>
         </section>
 
         <!-- DUAL-TIER PRICING & SERVICE COMPARISON TABLE -->
@@ -245,7 +251,7 @@
             </div>
         </section>
 
-        <!-- UNIFIED ITINERARY -->
+        <!-- UNIFIED ITINERARY WITH SCREENSHOT IMAGE GRID LAYOUT -->
         <section id="itinerary" class="mb-20">
             <div class="text-center max-w-3xl mx-auto mb-12">
                 <span class="text-primary text-xs font-bold uppercase tracking-widest">Day by Day Journey</span>
@@ -254,6 +260,7 @@
             </div>
 
             <div class="space-y-8">
+                
                 <!-- DAY 1 -->
                 <div class="bg-white rounded-3xl p-6 md:p-8 border border-slate-200 shadow-md relative overflow-hidden">
                     <div class="flex flex-wrap items-center justify-between gap-4 mb-6">
@@ -261,10 +268,25 @@
                             <span class="w-12 h-12 rounded-2xl bg-primary text-white font-extrabold text-lg flex items-center justify-center shadow-md">01</span>
                             <div>
                                 <span class="text-xs font-bold text-primary uppercase tracking-wider">Day One</span>
-                                <h3 class="text-xl md:text-2xl font-bold text-dark">Sembalun Village to Sembalun Crater Rim</h3>
+                                <h3 class="text-xl md:text-2xl font-bold text-dark">Sembalun Basecamp to Pelawangan Crater Rim</h3>
                             </div>
                         </div>
                         <span class="px-3 py-1 rounded-full bg-slate-100 text-slate-600 text-xs font-medium">⏱️ Est. 7 - 8 Hours Hiking</span>
+                    </div>
+
+                    <!-- PHOTO GRID SAMA PERSIS SEPERTI SCREENSHOT (1 BESAR KIRI + 2 TUMPUK KANAN) -->
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+                        <div class="md:col-span-2 overflow-hidden rounded-2xl h-64 md:h-80">
+                            <img src="../images/sembalun-crater-rim.jpg" alt="Sembalun Crater Rim" class="w-full h-full object-cover hover:scale-105 transition duration-500">
+                        </div>
+                        <div class="flex flex-col gap-4 h-64 md:h-80">
+                            <div class="overflow-hidden rounded-2xl h-1/2">
+                                <img src="../images/sembalun-savannah.jpg" alt="Sembalun Savanna" class="w-full h-full object-cover hover:scale-105 transition duration-500">
+                            </div>
+                            <div class="overflow-hidden rounded-2xl h-1/2">
+                                <img src="../images/vip-tent-setup.jpg" alt="Camp Setup" class="w-full h-full object-cover hover:scale-105 transition duration-500">
+                            </div>
+                        </div>
                     </div>
 
                     <ul class="space-y-2.5 text-xs md:text-sm text-slate-600 mb-6">
@@ -298,6 +320,21 @@
                             </div>
                         </div>
                         <span class="px-3 py-1 rounded-full bg-slate-100 text-slate-600 text-xs font-medium">⏱️ Est. 10 - 12 Hours Hiking</span>
+                    </div>
+
+                    <!-- PHOTO GRID SAMA PERSIS SEPERTI SCREENSHOT (1 BESAR KIRI + 2 TUMPUK KANAN) -->
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+                        <div class="md:col-span-2 overflow-hidden rounded-2xl h-64 md:h-80">
+                            <img src="../images/summit-rinjani.jpg" alt="Rinjani Summit Push" class="w-full h-full object-cover hover:scale-105 transition duration-500">
+                        </div>
+                        <div class="flex flex-col gap-4 h-64 md:h-80">
+                            <div class="overflow-hidden rounded-2xl h-1/2">
+                                <img src="../images/rinjani-summit-sunrise.jpg" alt="Summit Sunrise" class="w-full h-full object-cover hover:scale-105 transition duration-500">
+                            </div>
+                            <div class="overflow-hidden rounded-2xl h-1/2">
+                                <img src="../images/sembalun-crater-rim.jpg" alt="Descent Trail" class="w-full h-full object-cover hover:scale-105 transition duration-500">
+                            </div>
+                        </div>
                     </div>
 
                     <ul class="space-y-2.5 text-xs md:text-sm text-slate-600 mb-6">
