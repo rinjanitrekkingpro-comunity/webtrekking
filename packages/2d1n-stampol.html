@@ -66,21 +66,27 @@
         }
     </script>
 
-    /* Mencegah seleksi teks di seluruh halaman */
-body {
-  -webkit-user-select: none; /* Safari */
-  -moz-user-select: none;    /* Firefox */
-  -ms-user-select: none;     /* IE / Edge */
-  user-select: none;         /* Chrome & standar modern */
-}
+    <!-- STYLE KHUSUS ANTI COPY-PASTE & MENAMPILKAN TRANSLATE -->
+    <style>
+      /* Mencegah seleksi teks di seluruh halaman */
+      body {
+        -webkit-user-select: none; /* Safari */
+        -moz-user-select: none;    /* Firefox */
+        -ms-user-select: none;     /* IE / Edge */
+        user-select: none;         /* Chrome & standar modern */
+        top: 0px !important;
+      }
 
-/* Jika kamu ingin tombol atau form masukan tetap bisa diketik/diklik */
-input, textarea {
-  -webkit-user-select: auto;
-  -moz-user-select: auto;
-  -ms-user-select: auto;
-  user-select: auto;
-}
+      /* Izinkan elemen input/textarea diketik jika ada form */
+      input, textarea {
+        -webkit-user-select: auto;
+        -moz-user-select: auto;
+        -ms-user-select: auto;
+        user-select: auto;
+      }
+
+      .goog-te-banner-frame, .skiptranslate { display: none !important; }
+    </style>
 </head>
 <body class="bg-slate-50 text-slate-800 font-sans antialiased">
 
@@ -127,14 +133,10 @@ input, textarea {
     </script>
     <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
-    <style>
-      body { top: 0px !important; }
-      .goog-te-banner-frame, .skiptranslate { display: none !important; }
-    </style>
-
     <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W3C4XXJS" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
+    <!-- NAVBAR PERBAIKAN -->
     <nav class="w-full sticky top-0 z-50 bg-white/90 backdrop-blur-md shadow-sm border-b border-slate-100">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-16 md:h-20">
@@ -477,6 +479,27 @@ input, textarea {
             Chat with Local Expert
         </span>
     </a>
+
+    <!-- SCRIPT JAVASCRIPT MEMATIKAN KLIK KANAN & SHORTCUT COPY -->
+    <script>
+      // Mematikan Klik Kanan
+      document.addEventListener('contextmenu', function(e) {
+        e.preventDefault();
+      });
+
+      // Mematikan Shortcut Keyboard Copy, Select All, & Inspect Element
+      document.addEventListener('keydown', function(e) {
+        if (e.ctrlKey && (e.key === 'c' || e.key === 'C' || 
+                          e.key === 'u' || e.key === 'U' || 
+                          e.key === 's' || e.key === 'S' || 
+                          e.key === 'a' || e.key === 'A')) {
+          e.preventDefault();
+        }
+        if (e.key === 'F12') {
+          e.preventDefault();
+        }
+      });
+    </script>
 
 </body>
 </html>
