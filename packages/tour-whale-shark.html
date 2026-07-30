@@ -32,6 +32,24 @@
             }
         }
     </script>
+     <style>
+      body {
+        -webkit-user-select: none; /* Safari */
+        -moz-user-select: none;    /* Firefox */
+        -ms-user-select: none;     /* IE / Edge */
+        user-select: none;         /* Chrome & standar modern */
+        top: 0px !important;
+      }
+
+      input, textarea {
+        -webkit-user-select: auto;
+        -moz-user-select: auto;
+        -ms-user-select: auto;
+        user-select: auto;
+      }
+
+      .goog-te-banner-frame, .skiptranslate { display: none !important; }
+    </style>
 </head>
 <body class="bg-slate-50 text-gray-800 font-sans antialiased">
 
@@ -356,6 +374,34 @@
         </section>
 
     </main>
+    <script>
+  // 1. Mematikan Klik Kanan
+  document.addEventListener('contextmenu', function(e) {
+    e.preventDefault();
+  });
+
+  // 2. Mematikan Shortcut Keyboard Salin & Inspect Element
+  document.addEventListener('keydown', function(e) {
+    // Memblokir Ctrl+C, Ctrl+U, Ctrl+S, Ctrl+A, Ctrl+P
+    if (e.ctrlKey && (e.key === 'c' || e.key === 'C' || 
+                      e.key === 'u' || e.key === 'U' || 
+                      e.key === 's' || e.key === 'S' || 
+                      e.key === 'a' || e.key === 'A' || 
+                      e.key === 'p' || e.key === 'P')) {
+      e.preventDefault();
+    }
+    
+    // Memblokir tombol F12 (Developer Tools)
+    if (e.key === 'F12') {
+      e.preventDefault();
+    }
+
+    // Memblokir Ctrl+Shift+I (Developer Tools)
+    if (e.ctrlKey && e.shiftKey && (e.key === 'I' || e.key === 'i')) {
+      e.preventDefault();
+    }
+  });
+</script>
 
 </body>
 </html>
