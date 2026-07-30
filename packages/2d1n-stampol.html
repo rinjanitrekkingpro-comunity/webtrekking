@@ -65,6 +65,22 @@
             }
         }
     </script>
+
+    /* Mencegah seleksi teks di seluruh halaman */
+body {
+  -webkit-user-select: none; /* Safari */
+  -moz-user-select: none;    /* Firefox */
+  -ms-user-select: none;     /* IE / Edge */
+  user-select: none;         /* Chrome & standar modern */
+}
+
+/* Jika kamu ingin tombol atau form masukan tetap bisa diketik/diklik */
+input, textarea {
+  -webkit-user-select: auto;
+  -moz-user-select: auto;
+  -ms-user-select: auto;
+  user-select: auto;
+}
 </head>
 <body class="bg-slate-50 text-slate-800 font-sans antialiased">
 
