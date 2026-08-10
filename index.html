@@ -100,7 +100,11 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Playball&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- OPTIMASI: Muat FontAwesome di latar belakang agar tidak memblokir render (LCP jadi cepat) -->
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
+
     <link rel="stylesheet" href="css/style.css">
     
     <style>
@@ -126,7 +130,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     }, 'google_translate_element');
   }
 
-  // Fungsi mengubah bahasa saat tombol diklik
   function changeLanguage(langCode, langText, flagUrl) {
     document.getElementById('current-flag').src = flagUrl;
     document.getElementById('current-lang-text').innerText = langText;
@@ -141,14 +144,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     if (menu) menu.classList.add('hidden');
   }
 
-  // Toggle Buka/Tutup Menu Dropdown
   function toggleLangDropdown(event) {
     event.stopPropagation();
     var menu = document.getElementById('lang-dropdown-menu');
     if (menu) menu.classList.toggle('hidden');
   }
 
-  // Tutup menu jika mengklik area luar
   window.addEventListener('click', function() {
     var menu = document.getElementById('lang-dropdown-menu');
     if (menu && !menu.classList.contains('hidden')) {
@@ -172,10 +173,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <span><i class="fab fa-whatsapp text-green-500 mr-1"></i> +62 859 3315 0749</span>
         </div>
         <div class="flex space-x-5 ml-auto">
-            <a href="https://www.facebook.com/profile.php?id=61582743844387&locale=id_ID" target="_blank" class="hover:text-blue-500 transition transform hover:scale-110" title="Facebook"><i class="fab fa-facebook-f text-sm"></i></a>
-            <a href="https://www.instagram.com/rinjanitrekkingpro/" target="_blank" class="hover:text-pink-500 transition transform hover:scale-110" title="Instagram"><i class="fab fa-instagram text-sm"></i></a>
-            <a href="https://www.youtube.com/@rinjanitrekkingpro" target="_blank" class="hover:text-red-500 transition transform hover:scale-110" title="YouTube"><i class="fab fa-youtube text-sm"></i></a>
-            <a href="https://www.tiktok.com/@rinjanitrekkingpro" target="_blank" class="hover:text-gray-300 transition transform hover:scale-110" title="TikTok"><i class="fab fa-tiktok text-sm"></i></a>
+            <a href="https://www.facebook.com/profile.php?id=61582743844387&locale=id_ID" target="_blank" aria-label="Facebook Rinjani Trekking Pro" class="hover:text-blue-500 transition transform hover:scale-110" title="Facebook"><i class="fab fa-facebook-f text-sm"></i></a>
+            <a href="https://www.instagram.com/rinjanitrekkingpro/" target="_blank" aria-label="Instagram Rinjani Trekking Pro" class="hover:text-pink-500 transition transform hover:scale-110" title="Instagram"><i class="fab fa-instagram text-sm"></i></a>
+            <a href="https://www.youtube.com/@rinjanitrekkingpro" target="_blank" aria-label="Youtube Rinjani Trekking Pro" class="hover:text-red-500 transition transform hover:scale-110" title="YouTube"><i class="fab fa-youtube text-sm"></i></a>
+            <a href="https://www.tiktok.com/@rinjanitrekkingpro" target="_blank" aria-label="Tiktok Rinjani Trekking Pro" class="hover:text-gray-300 transition transform hover:scale-110" title="TikTok"><i class="fab fa-tiktok text-sm"></i></a>
         </div>
     </div>
 
@@ -185,7 +186,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             
             <!-- Logo Brand -->
             <div class="flex-shrink-0 flex items-center cursor-pointer" onclick="navigate('home')">
-                <img src="images/logo-rinjani-trekking-pro.png" alt="Logo Rinjani Trekking Pro" class="h-16 md:h-20 w-auto object-contain p-1 lg:scale-110 transition-transform">
+                <!-- OPTIMASI: Tambah width & height pada Logo -->
+                <img src="images/logo-rinjani-trekking-pro.png" alt="Logo Rinjani Trekking Pro" width="200" height="80" class="h-16 md:h-20 w-auto object-contain p-1 lg:scale-110 transition-transform">
             </div>
             
             <!-- Menu Tampilan Desktop -->
@@ -237,8 +239,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 
                 <!-- CUSTOM DROPDOWN BENDERA & KODE BAHASA -->
                 <div class="relative">
-                    <button onclick="toggleLangDropdown(event)" class="flex items-center space-x-1.5 bg-slate-100 hover:bg-slate-200 border border-slate-200 px-2.5 py-1.5 rounded-full text-xs font-bold text-slate-700 transition">
-                        <img id="current-flag" src="https://flagcdn.com/w20/gb.png" class="w-4 h-auto rounded-sm" alt="Flag">
+                    <button onclick="toggleLangDropdown(event)" aria-label="Ubah Bahasa" class="flex items-center space-x-1.5 bg-slate-100 hover:bg-slate-200 border border-slate-200 px-2.5 py-1.5 rounded-full text-xs font-bold text-slate-700 transition">
+                        <!-- OPTIMASI: Tambah width & height -->
+                        <img id="current-flag" src="https://flagcdn.com/w20/gb.png" width="20" height="15" class="w-4 h-auto rounded-sm" alt="Flag">
                         <span id="current-lang-text">EN</span>
                         <i class="fas fa-chevron-down text-[10px] text-slate-500 ml-0.5"></i>
                     </button>
@@ -246,30 +249,31 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <!-- Pilihan 5 Bahasa -->
                     <div id="lang-dropdown-menu" class="hidden absolute right-0 mt-2 w-36 bg-white rounded-xl shadow-2xl border border-slate-100 py-1.5 z-50">
                         <button onclick="changeLanguage('en', 'EN', 'https://flagcdn.com/w20/gb.png')" class="w-full text-left px-3 py-2 text-xs font-semibold text-slate-700 hover:bg-blue-50 flex items-center space-x-2">
-                            <img src="https://flagcdn.com/w20/gb.png" class="w-4 h-auto rounded-sm">
+                            <img src="https://flagcdn.com/w20/gb.png" width="20" height="15" class="w-4 h-auto rounded-sm" alt="English Flag">
                             <span>EN (English)</span>
                         </button>
                         <button onclick="changeLanguage('id', 'ID', 'https://flagcdn.com/w20/id.png')" class="w-full text-left px-3 py-2 text-xs font-semibold text-slate-700 hover:bg-blue-50 flex items-center space-x-2">
-                            <img src="https://flagcdn.com/w20/id.png" class="w-4 h-auto rounded-sm">
+                            <img src="https://flagcdn.com/w20/id.png" width="20" height="15" class="w-4 h-auto rounded-sm" alt="Indonesia Flag">
                             <span>ID (Indonesia)</span>
                         </button>
                         <button onclick="changeLanguage('nl', 'NL', 'https://flagcdn.com/w20/nl.png')" class="w-full text-left px-3 py-2 text-xs font-semibold text-slate-700 hover:bg-blue-50 flex items-center space-x-2">
-                            <img src="https://flagcdn.com/w20/nl.png" class="w-4 h-auto rounded-sm">
+                            <img src="https://flagcdn.com/w20/nl.png" width="20" height="15" class="w-4 h-auto rounded-sm" alt="Dutch Flag">
                             <span>NL (Dutch)</span>
                         </button>
                         <button onclick="changeLanguage('zh-CN', 'CN', 'https://flagcdn.com/w20/cn.png')" class="w-full text-left px-3 py-2 text-xs font-semibold text-slate-700 hover:bg-blue-50 flex items-center space-x-2">
-                            <img src="https://flagcdn.com/w20/cn.png" class="w-4 h-auto rounded-sm">
+                            <img src="https://flagcdn.com/w20/cn.png" width="20" height="15" class="w-4 h-auto rounded-sm" alt="China Flag">
                             <span>CN (Chinese)</span>
                         </button>
                         <button onclick="changeLanguage('th', 'TH', 'https://flagcdn.com/w20/th.png')" class="w-full text-left px-3 py-2 text-xs font-semibold text-slate-700 hover:bg-blue-50 flex items-center space-x-2">
-                            <img src="https://flagcdn.com/w20/th.png" class="w-4 h-auto rounded-sm">
+                            <img src="https://flagcdn.com/w20/th.png" width="20" height="15" class="w-4 h-auto rounded-sm" alt="Thai Flag">
                             <span>TH (Thai)</span>
                         </button>
                     </div>
                 </div>
 
                 <!-- Tombol Titik Tiga (Mobile Menu) -->
-                <button id="mobile-menu-btn" class="md:hidden text-gray-700 hover:text-primary focus:outline-none text-2xl p-1.5 cursor-pointer transition-colors">
+                <!-- OPTIMASI: Tambah aria-label agar ramah SEO & Aksesibilitas -->
+                <button id="mobile-menu-btn" aria-label="Buka Menu Navigasi" class="md:hidden text-gray-700 hover:text-primary focus:outline-none text-2xl p-1.5 cursor-pointer transition-colors">
                     <i class="fas fa-ellipsis-v"></i>
                 </button>
             </div>
@@ -309,7 +313,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <section id="home" class="page-section active">
             <div class="relative bg-slate-900 h-[750px] md:h-[850px] flex items-center justify-center overflow-hidden">
                 
-                <div class="absolute inset-0 bg-cover bg-center opacity-40 z-0" style="background-image: url('images/summit-rinjani.jpg');"></div>
+                <!-- OPTIMASI: Pindahkan background gambar inline css menjadi img elemen agar LCP lebih cepat di-render -->
+                <img src="images/summit-rinjani.jpg" alt="Mount Rinjani Summit View" width="1920" height="1080" class="absolute inset-0 w-full h-full object-cover opacity-40 z-0" style="object-position: center;">
                 
                 <div class="relative z-10 text-center px-4 max-w-4xl mx-auto mt-16 md:mt-0">
                     
@@ -357,7 +362,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                     <div class="bg-white rounded-[2rem] shadow-2xl p-4 transform transition duration-300 hover:-translate-y-3">
                         <div class="relative rounded-[1.5rem] overflow-hidden mb-4 h-64 bg-gray-200">
-                            <img src="images/summit-rinjani.jpg" alt="Mount Rinjani Summit Trekking Package" class="w-full h-full object-cover">
+                            <!-- OPTIMASI: Tambah width & height -->
+                            <img src="images/summit-rinjani.jpg" alt="Mount Rinjani Summit Trekking Package" width="600" height="400" class="w-full h-full object-cover">
                             <div class="absolute bottom-4 left-4 bg-white px-4 py-1.5 rounded-full font-bold text-primary shadow-md text-sm">SUMMIT 3,726 MASL</div>
                         </div>
                         <h3 class="font-heading font-bold text-2xl text-dark mb-2 text-center">2D1N Summit Trek</h3>
@@ -366,7 +372,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     </div>
                     <div class="bg-white rounded-[2rem] shadow-2xl p-4 transform transition duration-300 hover:-translate-y-3 md:-mt-8">
                         <div class="relative rounded-[1.5rem] overflow-hidden mb-4 h-64 bg-gray-200">
-                            <img src="images/danau-segaraanak.jpg" alt="Segara Anak Crater Lake" class="w-full h-full object-cover">
+                            <!-- OPTIMASI: Tambah width & height -->
+                            <img src="images/danau-segaraanak.jpg" alt="Segara Anak Crater Lake" width="600" height="400" class="w-full h-full object-cover">
                             <div class="absolute bottom-4 left-4 bg-white px-4 py-1.5 rounded-full font-bold text-primary shadow-md text-sm">LAKE & HOT SPRINGS</div>
                         </div>
                         <h3 class="font-heading font-bold text-2xl text-dark mb-2 text-center">3D2N Lake & Summit Sembalun to Senaru</h3>
@@ -375,7 +382,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     </div>
                     <div class="bg-white rounded-[2rem] shadow-2xl p-4 transform transition duration-300 hover:-translate-y-3">
                         <div class="relative rounded-[1.5rem] overflow-hidden mb-4 h-64 bg-gray-200">
-                            <img src="images/via-senaru.jpg" alt="Mount Rinjani Senaru Route" class="w-full h-full object-cover">
+                            <!-- OPTIMASI: Tambah width & height -->
+                            <img src="images/via-senaru.jpg" alt="Mount Rinjani Senaru Route" width="600" height="400" class="w-full h-full object-cover">
                             <div class="absolute bottom-4 left-4 bg-white px-4 py-1.5 rounded-full font-bold text-primary shadow-md text-sm">COMPLETE EXPLORATION</div>
                         </div>
                         <h3 class="font-heading font-bold text-2xl text-dark mb-2 text-center">4D3N Advanced Trek</h3>
@@ -398,7 +406,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <!-- Kolom 1: Sembalun To Torean 3D 2N Summit-Lake -->
         <div class="bg-white rounded-[2rem] shadow-2xl p-4 transform transition duration-300 hover:-translate-y-3">
             <div class="relative rounded-[1.5rem] overflow-hidden mb-4 h-64 bg-gray-200">
-                <img src="images/danau-segaraanak.jpeg" alt="Sembalun To Torean 3D 2N Summit-Lake" class="w-full h-full object-cover">
+                <img src="images/danau-segaraanak.jpeg" alt="Sembalun To Torean 3D 2N Summit-Lake" width="600" height="400" loading="lazy" class="w-full h-full object-cover">
                 <div class="absolute bottom-4 left-4 bg-white px-4 py-1.5 rounded-full font-bold text-primary shadow-md text-sm">SUMMIT & TOREAN</div>
             </div>
             <h3 class="font-heading font-bold text-2xl text-dark mb-2 text-center">Sembalun To Torean 3D 2N Summit-Lake</h3>
@@ -409,7 +417,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <!-- Kolom 2: Second Summit 2D 1N trekking -->
         <div class="bg-white rounded-[2rem] shadow-2xl p-4 transform transition duration-300 hover:-translate-y-3 md:-mt-4">
             <div class="relative rounded-[1.5rem] overflow-hidden mb-4 h-64 bg-gray-200">
-                <img src="images/summit-rinjani.jpg" alt="Second Summit 2D 1N trekking" class="w-full h-full object-cover">
+                <img src="images/summit-rinjani.jpg" alt="Second Summit 2D 1N trekking" width="600" height="400" loading="lazy" class="w-full h-full object-cover">
                 <div class="absolute bottom-4 left-4 bg-white px-4 py-1.5 rounded-full font-bold text-primary shadow-md text-sm">CHALLENGING PEAK</div>
             </div>
             <h3 class="font-heading font-bold text-2xl text-dark mb-2 text-center">Second Summit 2D 1N Trekking</h3>
@@ -421,7 +429,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <!-- Kolom 3: 2D 1N Crater Rim Senaru Private -->
         <div class="bg-white rounded-[2rem] shadow-2xl p-4 transform transition duration-300 hover:-translate-y-3">
             <div class="relative rounded-[1.5rem] overflow-hidden mb-4 h-64 bg-gray-200">
-                <img src="images/via-senaru.jpg" alt="2D 1N Via Senaru To Senaru Trek" class="w-full h-full object-cover">
+                <img src="images/via-senaru.jpg" alt="2D 1N Via Senaru To Senaru Trek" width="600" height="400" loading="lazy" class="w-full h-full object-cover">
                 <div class="absolute bottom-4 left-4 bg-white px-4 py-1.5 rounded-full font-bold text-primary shadow-md text-sm">RAINFOREST TREK</div>
             </div>
             <h3 class="font-heading font-bold text-2xl text-dark mb-2 text-center">2D 1N Crater Rim Senaru Private</h3>
@@ -444,7 +452,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     
                     <div class="bg-white rounded-[2rem] shadow-xl p-4 transform transition duration-300 hover:-translate-y-3">
                         <div class="relative rounded-[1.5rem] overflow-hidden mb-4 h-64 bg-gray-200">
-                            <img src="images/waterfal-tiu-kelep.jpeg" alt="Sendang Gile and Tiu Kelep Waterfall" class="w-full h-full object-cover">
+                            <img src="images/waterfal-tiu-kelep.jpeg" alt="Sendang Gile and Tiu Kelep Waterfall" width="600" height="400" loading="lazy" class="w-full h-full object-cover">
                             <div class="absolute bottom-4 left-4 bg-white px-4 py-1.5 rounded-full font-bold text-secondary shadow-md text-sm">CULTURE & NATURE</div>
                         </div>
                         <h3 class="font-heading font-bold text-2xl text-dark mb-2 text-center">Senaru Waterfalls</h3>
@@ -454,7 +462,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
                     <div class="bg-white rounded-[2rem] shadow-xl p-4 transform transition duration-300 hover:-translate-y-3">
                         <div class="relative rounded-[1.5rem] overflow-hidden mb-4 h-64 bg-gray-200">
-                            <img src="images/tetebatu-sawah.jpg" alt="Tetebatu Walking Tour" class="w-full h-full object-cover">
+                            <img src="images/tetebatu-sawah.jpg" alt="Tetebatu Walking Tour" width="600" height="400" loading="lazy" class="w-full h-full object-cover">
                             <div class="absolute bottom-4 left-4 bg-white px-4 py-1.5 rounded-full font-bold text-secondary shadow-md text-sm">RICE TERRACES</div>
                         </div>
                         <h3 class="font-heading font-bold text-2xl text-dark mb-2 text-center">Tetebatu Walking Tour</h3>
@@ -463,7 +471,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
                     <div class="bg-white rounded-[2rem] shadow-xl p-4 transform transition duration-300 hover:-translate-y-3">
                         <div class="relative rounded-[1.5rem] overflow-hidden mb-4 h-64 bg-gray-200">
-                            <img src="images/pergasingan.jpg" alt="Bukit Pergasingan Soft Hiking" class="w-full h-full object-cover">
+                            <img src="images/pergasingan.jpg" alt="Bukit Pergasingan Soft Hiking" width="600" height="400" loading="lazy" class="w-full h-full object-cover">
                             <div class="absolute bottom-4 left-4 bg-white px-4 py-1.5 rounded-full font-bold text-secondary shadow-md text-sm">SOFT HIKING</div>
                         </div>
                         <h3 class="font-heading font-bold text-2xl text-dark mb-2 text-center">Bukit Pergasingan</h3>
@@ -483,6 +491,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <img src="images/full-trekking-rinjani-map.jpeg" 
                      alt="Official Mount Rinjani Trekking Map & Trail Elevation Profile by Rinjani Trekking Pro" 
                      loading="lazy" 
+                     width="800" height="600"
                      class="w-full h-full object-contain md:object-cover group-hover:scale-105 transition duration-700">
                 
                 <!-- Gradasi Transparan -->
@@ -564,7 +573,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </a>
     </div>
 </section>
-               
+                
     <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 bg-slate-50">
     <div class="text-center mb-12">
         <span class="text-secondary font-bold tracking-wider uppercase text-sm mb-2 block">Our Stories</span>
@@ -575,7 +584,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     
     <div class="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
         <a href="blog.htm" class="block overflow-hidden">
-            <img src="images/rinjani-physical-prep.jpg" alt="rinjani-physical-prep" loading="lazy" class="w-full h-56 object-cover hover:scale-110 transition-transform duration-500">
+            <img src="images/rinjani-physical-prep.jpg" alt="rinjani-physical-prep" loading="lazy" width="400" height="250" class="w-full h-56 object-cover hover:scale-110 transition-transform duration-500">
         </a>
         <div class="p-6">
             <div class="flex items-center text-xs text-gray-500 mb-3 space-x-4">
@@ -594,7 +603,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     <div class="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
         <a href="blog.html" class="block overflow-hidden">
-            <img src="images/rinjani-reopening-2026.jpg" alt="rinjani-reopening-2026" loading="lazy" class="w-full h-56 object-cover hover:scale-110 transition-transform duration-500">
+            <img src="images/rinjani-reopening-2026.jpg" alt="rinjani-reopening-2026" loading="lazy" width="400" height="250" class="w-full h-56 object-cover hover:scale-110 transition-transform duration-500">
         </a>
         <div class="p-6">
             <div class="flex items-center text-xs text-gray-500 mb-3 space-x-4">
@@ -613,7 +622,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     <div class="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
         <a href="blog.html" class="block overflow-hidden">
-            <img src="images/mesin-laundry.png" loading="lazy" alt="Fasilitas Basecamp" loading="lazy" class="w-full h-56 object-cover hover:scale-110 transition-transform duration-500">
+            <img src="images/mesin-laundry.png" alt="Fasilitas Basecamp" loading="lazy" width="400" height="250" class="w-full h-56 object-cover hover:scale-110 transition-transform duration-500">
         </a>
         <div class="p-6">
             <div class="flex items-center text-xs text-gray-500 mb-3 space-x-4">
@@ -717,7 +726,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <div class="bg-white border border-gray-200 rounded-xl p-6 md:p-8 shadow-[0_4px_15px_rgba(0,0,0,0.08)] transition-transform duration-300 hover:-translate-y-1 text-left">
     
     <div class="flex justify-between items-center mb-4">
-      <img src="https://static.tacdn.com/img2/brand_refresh/Tripadvisor_lockup_horizontal_secondary_registered.svg" alt="TripAdvisor Logo" class="h-7 md:h-8 w-auto">
+      <img src="https://static.tacdn.com/img2/brand_refresh/Tripadvisor_lockup_horizontal_secondary_registered.svg" alt="TripAdvisor Logo" width="150" height="30" class="h-7 md:h-8 w-auto">
       <div class="text-[#00aa6c] text-lg md:text-xl tracking-widest">⭐⭐⭐⭐⭐</div>
     </div>
 
@@ -873,7 +882,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
                     <div class="lg:col-span-5 space-y-6">
                         <div class="rounded-[2rem] overflow-hidden shadow-2xl relative border-4 border-white group cursor-pointer">
-                            <img src="images/stampol-goup.jpg" alt="Rinjani Trekking Pro Team" class="w-full h-[300px] object-cover group-hover:scale-105 transition duration-700">
+                            <img src="images/stampol-goup.jpg" alt="Rinjani Trekking Pro Team" width="500" height="300" class="w-full h-[300px] object-cover group-hover:scale-105 transition duration-700">
                             <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent p-6 pt-16">
                                 <p class="text-white font-bold text-xl drop-shadow-md">Our Expert Local Team</p>
                                 <p class="text-gray-200 text-sm font-medium">Over 15 Years of Mountain Experience</p>
@@ -881,10 +890,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         </div>
                         <div class="grid grid-cols-2 gap-6">
                             <div class="rounded-3xl overflow-hidden shadow-lg h-36">
-                                <img src="images/makan-siang.jpg"loading="lazy" alt="Mountain Dining" class="w-full h-full object-cover hover:scale-110 transition duration-500">
+                                <img src="images/makan-siang.jpg" loading="lazy" width="250" height="150" alt="Mountain Dining" class="w-full h-full object-cover hover:scale-110 transition duration-500">
                             </div>
                             <div class="rounded-3xl overflow-hidden shadow-lg h-36">
-                                <img src="images/pelawangan-sembalun.jpg"loading="lazy" alt="Camping" class="w-full h-full object-cover hover:scale-110 transition duration-500">
+                                <img src="images/pelawangan-sembalun.jpg" loading="lazy" width="250" height="150" alt="Camping" class="w-full h-full object-cover hover:scale-110 transition duration-500">
                             </div>
                         </div>
                     </div>
@@ -941,7 +950,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                     <div class="bg-white rounded-3xl shadow-xl border border-blue-100 overflow-hidden">
                         <div class="relative h-56 bg-gray-200">
-                            <img src="images/summit-rinjani.jpg" alt="2D1N Trek" class="w-full h-full object-cover">
+                            <img src="images/summit-rinjani.jpg" alt="2D1N Trek" width="400" height="250" class="w-full h-full object-cover">
                             <div class="absolute top-0 left-6 bg-red-500 text-white px-3 py-2 rounded-b-lg font-bold">10% OFF</div>
                         </div>
                         <div class="p-8 text-center">
@@ -953,7 +962,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     </div>
                     <div class="bg-white rounded-3xl shadow-xl border-t-4 border-t-primary overflow-hidden transform md:scale-105 z-10">
                         <div class="relative h-56 bg-gray-200">
-                            <img src="images/danau-segaraanak.jpg"alt="3D2N Trek"loading="lazy" class="w-full h-full object-cover">
+                            <img src="images/danau-segaraanak.jpg" alt="3D2N Trek" width="400" height="250" loading="lazy" class="w-full h-full object-cover">
                             <div class="absolute top-4 right-4 bg-primary text-white text-xs px-3 py-1 rounded-full font-bold">BEST SELLER</div>
                         </div>
                         <div class="p-8 text-center">
@@ -965,7 +974,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     </div>
                     <div class="bg-white rounded-3xl shadow-xl border border-blue-100 overflow-hidden">
                         <div class="relative h-56 bg-gray-200">
-                            <img src="images/via-senaru.jpg" alt="4D3N Trek"loading="lazy" class="w-full h-full object-cover">
+                            <img src="images/via-senaru.jpg" alt="4D3N Trek" width="400" height="250" loading="lazy" class="w-full h-full object-cover">
                         </div>
                         <div class="p-8 text-center">
                             <h3 class="font-heading font-bold text-2xl text-dark mb-1">4 DAYS 3 NIGHTS</h3>
@@ -981,8 +990,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         OPEN ALL YEAR ROUND
                     </div>
                     <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-    <div class="overflow-hidden rounded-2xl shadow-md h-48 md:h-64"><img src="images/summit-rinjani.jpg" ...></div>
-    <div class="overflow-hidden rounded-2xl shadow-md h-48 md:h-64"><img src="images/danau-segaraanak.jpg" ...></div>
+    <div class="overflow-hidden rounded-2xl shadow-md h-48 md:h-64"><img src="images/summit-rinjani.jpg" width="300" height="200" alt="Summit View" class="w-full h-full object-cover"></div>
+    <div class="overflow-hidden rounded-2xl shadow-md h-48 md:h-64"><img src="images/danau-segaraanak.jpg" width="300" height="200" alt="Lake View" class="w-full h-full object-cover"></div>
     </div>
                         <div class="md:col-span-3 p-8 flex flex-col justify-center text-left">
                             <span class="text-green-500 font-bold tracking-wider uppercase text-sm mb-1">Alternative Soft Trekking</span>
@@ -1084,7 +1093,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
        <!-- Card 1: Flexible Trekking Options -->
 <div class="bg-slate-50 rounded-2xl overflow-hidden shadow-md border border-gray-100 hover:-translate-y-2 transition duration-300 flex flex-col h-full">
     <div class="h-48 bg-gray-200 shrink-0">
-        <img src="images/flexible-trek.jpg" alt="Flexible Rinjani Trekking Options" loading="lazy" class="w-full h-full object-cover">
+        <img src="images/flexible-trek.jpg" alt="Flexible Rinjani Trekking Options" loading="lazy" width="400" height="250" class="w-full h-full object-cover">
     </div>
     <div class="p-6 flex flex-col flex-grow">
         <span class="text-primary text-xs font-bold uppercase tracking-wider block mb-2">Trekking Style</span>
@@ -1099,7 +1108,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- Card 2: Eco-Friendly Trekking -->
 <div class="bg-slate-50 rounded-2xl overflow-hidden shadow-md border border-gray-100 hover:-translate-y-2 transition duration-300 flex flex-col h-full">
     <div class="h-48 bg-gray-200 shrink-0">
-        <img src="images/eco-rinjani.jpg" alt="Eco Friendly Rinjani Trekking" loading="lazy" class="w-full h-full object-cover">
+        <img src="images/eco-rinjani.jpg" alt="Eco Friendly Rinjani Trekking" loading="lazy" width="400" height="250" class="w-full h-full object-cover">
     </div>
     <div class="p-6 flex flex-col flex-grow">
         <span class="text-emerald-600 text-xs font-bold uppercase tracking-wider block mb-2">Sustainability</span>
@@ -1114,7 +1123,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- Card 3: Licensed Trekking Operator -->
 <div class="bg-slate-50 rounded-2xl overflow-hidden shadow-md border border-gray-100 hover:-translate-y-2 transition duration-300 flex flex-col h-full">
     <div class="h-48 bg-gray-200 shrink-0">
-        <img src="images/safe-trek.jpg" alt="Licensed Rinjani Operator Safety" loading="lazy" class="w-full h-full object-cover">
+        <img src="images/safe-trek.jpg" alt="Licensed Rinjani Operator Safety" loading="lazy" width="400" height="250" class="w-full h-full object-cover">
     </div>
     <div class="p-6 flex flex-col flex-grow">
         <span class="text-red-500 text-xs font-bold uppercase tracking-wider block mb-2">Trust & Security</span>
@@ -1127,7 +1136,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </div>
             <div class="bg-slate-50 rounded-2xl overflow-hidden shadow-md border border-gray-100 hover:-translate-y-2 transition duration-300">
                 <div class="h-48 bg-gray-200">
-                    <img src="images/persiapan-pendakian.jpg" alt="Mount Rinjani Packing List" loading="lazy" class="w-full h-full object-cover">
+                    <img src="images/persiapan-pendakian.jpg" alt="Mount Rinjani Packing List" loading="lazy" width="400" height="250" class="w-full h-full object-cover">
                 </div>
                 <div class="p-6">
                     <span class="text-orange-500 text-xs font-bold uppercase tracking-wider">Gear Guide</span>
@@ -1141,7 +1150,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
             <div class="bg-slate-50 rounded-2xl overflow-hidden shadow-md border border-gray-100 hover:-translate-y-2 transition duration-300">
                 <div class="h-48 bg-gray-200">
-                    <img src="images/pelawangan-sembalun.jpg" alt="Sembalun vs Senaru Route" loading="lazy" class="w-full h-full object-cover">
+                    <img src="images/pelawangan-sembalun.jpg" alt="Sembalun vs Senaru Route" loading="lazy" width="400" height="250" class="w-full h-full object-cover">
                 </div>
                 <div class="p-6">
                     <span class="text-blue-500 text-xs font-bold uppercase tracking-wider">Route Info</span>
@@ -1155,7 +1164,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
             <div class="bg-slate-50 rounded-2xl overflow-hidden shadow-md border border-gray-100 hover:-translate-y-2 transition duration-300">
                 <div class="h-48 bg-gray-200">
-                    <img src="images/Sabana-Rinjani-Menghijau.jpg" alt="Eco Friendly Trekking Rinjani" loading="lazy" class="w-full h-full object-cover">
+                    <img src="images/Sabana-Rinjani-Menghijau.jpg" alt="Eco Friendly Trekking Rinjani" loading="lazy" width="400" height="250" class="w-full h-full object-cover">
                 </div>
                 <div class="p-6">
                     <span class="text-green-600 text-xs font-bold uppercase tracking-wider">Eco-Tourism</span>
@@ -1169,7 +1178,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
             <div class="bg-slate-50 rounded-2xl overflow-hidden shadow-md border border-gray-100 hover:-translate-y-2 transition duration-300">
                 <div class="h-48 bg-gray-200">
-                    <img src="images/stampol-goup.jpg" alt="Mount Rinjani Safety and Acclimatization" loading="lazy" class="w-full h-full object-cover">
+                    <img src="images/stampol-goup.jpg" alt="Mount Rinjani Safety and Acclimatization" loading="lazy" width="400" height="250" class="w-full h-full object-cover">
                 </div>
                 <div class="p-6">
                     <span class="text-red-500 text-xs font-bold uppercase tracking-wider">Health & Safety</span>
@@ -1183,7 +1192,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
             <div class="bg-slate-50 rounded-2xl overflow-hidden shadow-md border border-gray-100 hover:-translate-y-2 transition duration-300">
                 <div class="h-48 bg-gray-200">
-                    <img src="images/summit-rinjani.jpg" alt="Mount Rinjani Photography Spots" loading="lazy" class="w-full h-full object-cover">
+                    <img src="images/summit-rinjani.jpg" alt="Mount Rinjani Photography Spots" loading="lazy" width="400" height="250" class="w-full h-full object-cover">
                 </div>
                 <div class="p-6">
                     <span class="text-purple-500 text-xs font-bold uppercase tracking-wider">Photography</span>
@@ -1197,7 +1206,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
             <div class="bg-slate-50 rounded-2xl overflow-hidden shadow-md border border-gray-100 hover:-translate-y-2 transition duration-300">
                 <div class="h-48 bg-gray-200">
-                    <img src="images/waterfal-tiu-kelep.jpeg" alt="Senaru Waterfalls Lombok" loading="lazy" class="w-full h-full object-cover">
+                    <img src="images/waterfal-tiu-kelep.jpeg" alt="Senaru Waterfalls Lombok" loading="lazy" width="400" height="250" class="w-full h-full object-cover">
                 </div>
                 <div class="p-6">
                     <span class="text-teal-500 text-xs font-bold uppercase tracking-wider">Local Guide</span>
@@ -1212,7 +1221,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <!-- BEYOND LOMBOK / EXPLORE MORE SECTION -->
             <div class="bg-slate-50 rounded-2xl overflow-hidden shadow-md border border-gray-100 hover:-translate-y-2 transition duration-300">
                 <div class="h-48 bg-gray-200">
-                    <img src="images/whale-shark-sumbawa.jpg" alt="Whale Shark Sumbawa" loading="lazy" class="w-full h-full object-cover">
+                    <img src="images/whale-shark-sumbawa.jpg" alt="Whale Shark Sumbawa" loading="lazy" width="400" height="250" class="w-full h-full object-cover">
                 </div>
                 <div class="p-6">
                     <span class="text-blue-600 text-xs font-bold uppercase tracking-wider">Marine Wildlife</span>
@@ -1226,7 +1235,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
             <div class="bg-slate-50 rounded-2xl overflow-hidden shadow-md border border-gray-100 hover:-translate-y-2 transition duration-300">
                 <div class="h-48 bg-gray-200">
-                    <img src="images/pulau-satonda.jpg" alt="Satonda Island" loading="lazy" class="w-full h-full object-cover">
+                    <img src="images/pulau-satonda.jpg" alt="Satonda Island" loading="lazy" width="400" height="250" class="w-full h-full object-cover">
                 </div>
                 <div class="p-6">
                     <span class="text-green-600 text-xs font-bold uppercase tracking-wider">Island Exploration</span>
@@ -1240,7 +1249,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
             <div class="bg-slate-50 rounded-2xl overflow-hidden shadow-md border border-gray-100 hover:-translate-y-2 transition duration-300">
                 <div class="h-48 bg-gray-200">
-                    <img src="images/pantai-mawun.jpg" alt="Mawun Beach Lombok" loading="lazy" class="w-full h-full object-cover">
+                    <img src="images/pantai-mawun.jpg" alt="Mawun Beach Lombok" loading="lazy" width="400" height="250" class="w-full h-full object-cover">
                 </div>
                 <div class="p-6">
                     <span class="text-yellow-500 text-xs font-bold uppercase tracking-wider">Hidden Beaches</span>
@@ -1548,19 +1557,19 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 
                 <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
                     <div class="md:col-span-2 md:row-span-2 overflow-hidden rounded-[2rem] shadow-lg h-64 md:h-auto">
-                        <img src="images/summit-rinjani.jpg" alt="Rinjani Summit" class="w-full h-full object-cover hover:scale-110 transition duration-700 cursor-pointer">
+                        <img src="images/summit-rinjani.jpg" alt="Rinjani Summit" width="600" height="400" class="w-full h-full object-cover hover:scale-110 transition duration-700 cursor-pointer">
                     </div>
                     <div class="overflow-hidden rounded-[1.5rem] shadow-md h-48 md:h-64">
-                        <img src="images/danau-segaraanak.jpg" alt="Segara Anak Lake" loading="lazy" class="w-full h-full object-cover hover:scale-110 transition duration-700 cursor-pointer">
+                        <img src="images/danau-segaraanak.jpg" alt="Segara Anak Lake" loading="lazy" width="300" height="250" class="w-full h-full object-cover hover:scale-110 transition duration-700 cursor-pointer">
                     </div>
                     <div class="overflow-hidden rounded-[1.5rem] shadow-md h-48 md:h-64">
-                        <img src="images/via-senaru.jpg" alt="Senaru Route" loading="lazy" class="w-full h-full object-cover hover:scale-110 transition duration-700 cursor-pointer">
+                        <img src="images/via-senaru.jpg" alt="Senaru Route" loading="lazy" width="300" height="250" class="w-full h-full object-cover hover:scale-110 transition duration-700 cursor-pointer">
                     </div>
                     <div class="overflow-hidden rounded-[1.5rem] shadow-md h-48 md:h-64">
-                        <img src="images/stampol-goup.jpg" alt="Stampol Rim" loading="lazy" class="w-full h-full object-cover hover:scale-110 transition duration-700 cursor-pointer">
+                        <img src="images/stampol-goup.jpg" alt="Stampol Rim" loading="lazy" width="300" height="250" class="w-full h-full object-cover hover:scale-110 transition duration-700 cursor-pointer">
                     </div>
                     <div class="overflow-hidden rounded-[1.5rem] shadow-md h-48 md:h-64">
-                        <img src="images/pelawangan-sembalun.jpg" alt="Sembalun Rim" loading="lazy" class="w-full h-full object-cover hover:scale-110 transition duration-700 cursor-pointer">
+                        <img src="images/pelawangan-sembalun.jpg" alt="Sembalun Rim" loading="lazy" width="300" height="250" class="w-full h-full object-cover hover:scale-110 transition duration-700 cursor-pointer">
                     </div>
                 </div>
                 
@@ -1610,7 +1619,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     </div>
 
                     <div class="bg-gray-200 rounded-3xl overflow-hidden shadow-lg border border-gray-100 h-[400px] lg:h-auto relative">
+                        <!-- OPTIMASI: Tambahkan title pada iframe Google Maps agar skor Aksesibilitas tidak turun -->
                         <iframe 
+                            title="Peta Lokasi Basecamp Rinjani Trekking Pro di Senaru"
                             src="https://maps.google.com/maps?q=Rinjani%20Trekking%20Pro,%20Senaru&t=&z=13&ie=UTF8&iwloc=&output=embed" 
                             width="100%" 
                             height="100%" 
@@ -1632,19 +1643,20 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
             
             <div>
-                <img src="../images/logo-rinjani-trekking-pro.png" alt="Rinjani Trekking Pro Logo" class="h-16 bg-white rounded-md p-1 mb-5">
+                <!-- OPTIMASI: Tambah width & height -->
+                <img src="images/logo-rinjani-trekking-pro.png" alt="Rinjani Trekking Pro Logo" width="200" height="80" class="h-16 bg-white rounded-md p-1 mb-5">
                 <p class="text-gray-400 text-sm mb-6 leading-relaxed">
                     Your trusted local expert for Mount Rinjani trekking. 100% transparent, eco-friendly, and professional services.
                 </p>
                 <div class="flex space-x-3 mb-8">
-                    <a href="#" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-primary transition"><i class="fab fa-facebook-f text-gray-300"></i></a>
-                    <a href="#" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-primary transition"><i class="fab fa-instagram text-gray-300"></i></a>
-                    <a href="https://www.youtube.com/@rinjanitrekkingpro" target="_blank" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-primary transition" title="YouTube"><i class="fab fa-youtube text-gray-300"></i></a>
+                    <a href="#" aria-label="Facebook Link" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-primary transition"><i class="fab fa-facebook-f text-gray-300"></i></a>
+                    <a href="#" aria-label="Instagram Link" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-primary transition"><i class="fab fa-instagram text-gray-300"></i></a>
+                    <a href="https://www.youtube.com/@rinjanitrekkingpro" aria-label="Youtube Link" target="_blank" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-primary transition" title="YouTube"><i class="fab fa-youtube text-gray-300"></i></a>
                 </div>
                 
                 <div>
                     <p class="text-xs text-gray-500 mb-2 uppercase tracking-wider font-semibold">Official Partner Of:</p>
-                    <img src="../images/tamannasional.jpg" alt="Taman Nasional Gunung Rinjani" loading="lazy" class="h-16 w-16 object-cover rounded-full bg-white p-1">
+                    <img src="images/tamannasional.jpg" alt="Taman Nasional Gunung Rinjani" width="64" height="64" loading="lazy" class="h-16 w-16 object-cover rounded-full bg-white p-1">
                 </div>
             </div>
 
@@ -1710,7 +1722,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
     </div>
     
-    <a href="https://wa.me/6285933150749" target="_blank" class="absolute bottom-6 right-6 bg-green-500 text-white w-14 h-14 flex items-center justify-center rounded-full shadow-lg hover:bg-green-600 transition hover:scale-110 z-50">
+    <a href="https://wa.me/6285933150749" aria-label="WhatsApp Kami" target="_blank" class="absolute bottom-6 right-6 bg-green-500 text-white w-14 h-14 flex items-center justify-center rounded-full shadow-lg hover:bg-green-600 transition hover:scale-110 z-50">
         <i class="fab fa-whatsapp text-3xl"></i>
     </a>
 </footer>
@@ -1890,6 +1902,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <a href="https://wa.me/6285933150749?text=Hello%20Rinjani%20Trekking%20Pro%2C%20I%20need%20more%20information%20about%20your%20trekking%20packages." 
        onclick="return gtag_report_conversion('https://wa.me/6285933150749?text=Hello%20Rinjani%20Trekking%20Pro%2C%20I%20need%20more%20information%20about%20your%20trekking%20packages.');"
        target="_blank" 
+       aria-label="Tanya Expert Lewat WhatsApp"
        class="fixed bottom-6 right-6 z-[100] bg-green-500 hover:bg-green-600 text-white w-14 h-14 rounded-full flex items-center justify-center shadow-2xl transform hover:scale-110 transition duration-300 group">
         
         <i class="fab fa-whatsapp text-3xl"></i>
@@ -1929,17 +1942,3 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
