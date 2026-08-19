@@ -76,75 +76,10 @@
             }
         }
     </script>
-     <style>
-      body {
-        -webkit-user-select: none; /* Safari */
-        -moz-user-select: none;    /* Firefox */
-        -ms-user-select: none;     /* IE / Edge */
-        user-select: none;         /* Chrome & standar modern */
-        top: 0px !important;
-      }
-
-      input, textarea {
-        -webkit-user-select: auto;
-        -moz-user-select: auto;
-        -ms-user-select: auto;
-        user-select: auto;
-      }
-
-      .goog-te-banner-frame, .skiptranslate { display: none !important; }
-    </style>
 </head>
 <body class="bg-slate-50 text-slate-800 font-sans antialiased">
 
-     <!-- HIDDEN GOOGLE TRANSLATE ENGINE -->
-    <div id="google_translate_element" style="display:none;"></div>
-
-    <script type="text/javascript">
-      function googleTranslateElementInit() {
-        new google.translate.TranslateElement({
-          pageLanguage: 'en',
-          includedLanguages: 'en,id,nl,zh-CN,th',
-          autoDisplay: false
-        }, 'google_translate_element');
-      }
-
-      function changeLanguage(langCode, langText, flagUrl) {
-        var flagImg = document.getElementById('current-flag');
-        var langTxt = document.getElementById('current-lang-text');
-        if(flagImg) flagImg.src = flagUrl;
-        if(langTxt) langTxt.innerText = langText;
-        
-        var selectObj = document.querySelector(".goog-te-combo");
-        if (selectObj) {
-          selectObj.value = langCode;
-          selectObj.dispatchEvent(new Event('change'));
-        }
-        
-        var menu = document.getElementById('lang-dropdown-menu');
-        if (menu) menu.classList.add('hidden');
-      }
-
-      function toggleLangDropdown(event) {
-        event.stopPropagation();
-        var menu = document.getElementById('lang-dropdown-menu');
-        if (menu) menu.classList.toggle('hidden');
-      }
-
-      window.addEventListener('click', function() {
-        var menu = document.getElementById('lang-dropdown-menu');
-        if (menu && !menu.classList.contains('hidden')) {
-          menu.classList.add('hidden');
-        }
-      });
-    </script>
-    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-
-    <style>
-      body { top: 0px !important; }
-      .goog-te-banner-frame, .skiptranslate { display: none !important; }
-    </style>
-
+     
     <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W3C4XXJS" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
@@ -155,40 +90,7 @@
                     <img src="../images/logo-rinjani-trekking-pro.png" alt="Logo Rinjani Trekking Pro" class="h-12 md:h-16 w-auto object-contain">
                 </a>
                 
-                <div class="flex items-center space-x-2">
-                    
-                    <!-- DROPDOWN TRANSLATE BENDERA (5 BAHASA) -->
-                    <div class="relative inline-block">
-                        <button onclick="toggleLangDropdown(event)" class="flex items-center space-x-1 bg-slate-100 hover:bg-slate-200 border border-slate-200 px-2.5 py-1.5 rounded-full text-xs font-bold text-slate-700 transition cursor-pointer">
-                            <img id="current-flag" src="https://flagcdn.com/w20/gb.png" class="w-4 h-auto rounded-sm" alt="Flag">
-                            <span id="current-lang-text">EN</span>
-                            <i class="fas fa-chevron-down text-[10px] text-slate-500 ml-0.5"></i>
-                        </button>
-
-                        <!-- Menu Pilihan 5 Bahasa -->
-                        <div id="lang-dropdown-menu" class="hidden absolute right-0 mt-2 w-36 bg-white rounded-xl shadow-2xl border border-slate-100 py-1.5 z-50">
-                            <button onclick="changeLanguage('en', 'EN', 'https://flagcdn.com/w20/gb.png')" class="w-full text-left px-3 py-2 text-xs font-semibold text-slate-700 hover:bg-blue-50 flex items-center space-x-2 cursor-pointer">
-                                <img src="https://flagcdn.com/w20/gb.png" class="w-4 h-auto rounded-sm">
-                                <span>EN (English)</span>
-                            </button>
-                            <button onclick="changeLanguage('id', 'ID', 'https://flagcdn.com/w20/id.png')" class="w-full text-left px-3 py-2 text-xs font-semibold text-slate-700 hover:bg-blue-50 flex items-center space-x-2 cursor-pointer">
-                                <img src="https://flagcdn.com/w20/id.png" class="w-4 h-auto rounded-sm">
-                                <span>ID (Indonesia)</span>
-                            </button>
-                            <button onclick="changeLanguage('nl', 'NL', 'https://flagcdn.com/w20/nl.png')" class="w-full text-left px-3 py-2 text-xs font-semibold text-slate-700 hover:bg-blue-50 flex items-center space-x-2 cursor-pointer">
-                                <img src="https://flagcdn.com/w20/nl.png" class="w-4 h-auto rounded-sm">
-                                <span>NL (Dutch)</span>
-                            </button>
-                            <button onclick="changeLanguage('zh-CN', 'CN', 'https://flagcdn.com/w20/cn.png')" class="w-full text-left px-3 py-2 text-xs font-semibold text-slate-700 hover:bg-blue-50 flex items-center space-x-2 cursor-pointer">
-                                <img src="https://flagcdn.com/w20/cn.png" class="w-4 h-auto rounded-sm">
-                                <span>CN (Chinese)</span>
-                            </button>
-                            <button onclick="changeLanguage('th', 'TH', 'https://flagcdn.com/w20/th.png')" class="w-full text-left px-3 py-2 text-xs font-semibold text-slate-700 hover:bg-blue-50 flex items-center space-x-2 cursor-pointer">
-                                <img src="https://flagcdn.com/w20/th.png" class="w-4 h-auto rounded-sm">
-                                <span>TH (Thai)</span>
-                            </button>
-                        </div>
-                    </div>
+               
 
                     <!-- Tombol Kembali Ringkas (Back) -->
                     <a href="../index.html" class="bg-blue-50 text-primary hover:bg-primary hover:text-white px-3 py-1.5 rounded-full text-xs font-bold transition flex items-center border border-blue-200 whitespace-nowrap">
@@ -463,7 +365,117 @@
                 </div>
             </div>
         </section>
+      <!-- TRAIL VITAL STATS & WHY US (2D1N CRATER RIM SENARU) -->
+<section class="mb-20">
+    
+    <!-- Intro Paragraph -->
+    <div class="text-center max-w-4xl mx-auto mb-10">
+        <h2 class="text-3xl font-extrabold text-dark mt-1 mb-4">Why Choose the 2D1N Senaru Crater Rim Trek?</h2>
+        <p class="text-slate-600 text-sm md:text-base leading-relaxed">
+            The Senaru side offers Rinjani's most gentle, lush, and scenic approach. This Crater Rim expedition takes you to the breathtaking western edge of the caldera — with sweeping views across the lake, volcano, and distant peaks — without the extreme steepness of the summit push. Ideal if you seek majestic views, cool mountain forests, and a deeply peaceful experience. Two days, one night, and memories to cherish.
+        </p>
+    </div>
 
+    <!-- Quick Facts / Trail Vital Stats (Dark Mode UI) -->
+    <div class="bg-dark text-white rounded-3xl p-6 md:p-8 shadow-2xl mb-12 relative overflow-hidden">
+        <div class="absolute top-0 right-0 opacity-10 pointer-events-none">
+            <i class="fas fa-mountain text-[15rem] -mt-10 -mr-10"></i>
+        </div>
+        <div class="relative z-10">
+            <h3 class="text-secondary font-bold text-lg mb-6 uppercase tracking-wider flex items-center">
+                <i class="fas fa-clipboard-list mr-2"></i> Quick Facts Before You Go
+            </h3>
+            <div class="grid grid-cols-2 md:grid-cols-5 gap-6 text-sm">
+                <div>
+                    <span class="block text-slate-400 text-xs mb-1">Total Distance</span>
+                    <span class="font-bold text-white text-base">± 22 km (Return)</span>
+                </div>
+                <div>
+                    <span class="block text-slate-400 text-xs mb-1">Difficulty</span>
+                    <span class="font-bold text-amber-400 text-base">Moderate</span>
+                </div>
+                <div>
+                    <span class="block text-slate-400 text-xs mb-1">Temp Range</span>
+                    <span class="font-bold text-blue-300 text-base">Cool Evenings</span>
+                </div>
+                <div>
+                    <span class="block text-slate-400 text-xs mb-1">Best Season</span>
+                    <span class="font-bold text-white text-base">April – October</span>
+                </div>
+                <div>
+                    <span class="block text-slate-400 text-xs mb-1">Route</span>
+                    <span class="font-bold text-white text-base">Senaru Return</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Emotional Hook Quote -->
+    <blockquote class="text-center max-w-3xl mx-auto mb-12">
+        <i class="fas fa-quote-left text-4xl text-slate-200 mb-4 block"></i>
+        <p class="text-xl text-slate-700 italic font-medium leading-relaxed">
+            "From the Senaru rim, the mountain breathes differently — quieter, greener, and deeply serene. This is Rinjani's gentle face."
+        </p>
+    </blockquote>
+
+    <!-- Why Choose Us Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <!-- Item 1 -->
+        <div class="bg-blue-50/70 p-6 rounded-2xl border border-blue-100 flex gap-4 hover:shadow-md transition">
+            <div class="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center flex-shrink-0 shadow-md">
+                <i class="fas fa-map-pin text-xl"></i>
+            </div>
+            <div>
+                <h4 class="font-bold text-dark mb-2">Local Senaru Guides</h4>
+                <p class="text-sm text-slate-600 leading-relaxed">Born here, raised here, trained in First Aid and safety — our expert guides know every tree and every trail on the western slopes.</p>
+            </div>
+        </div>
+
+        <!-- Item 2 -->
+        <div class="bg-green-50/70 p-6 rounded-2xl border border-green-100 flex gap-4 hover:shadow-md transition">
+            <div class="w-12 h-12 bg-green-500 text-white rounded-full flex items-center justify-center flex-shrink-0 shadow-md">
+                <i class="fas fa-handshake text-xl"></i>
+            </div>
+            <div>
+                <h4 class="font-bold text-dark mb-2">Fair & Direct</h4>
+                <p class="text-sm text-slate-600 leading-relaxed">Book directly with the community — your continuous support helps keep Senaru village prosperous and beautiful.</p>
+            </div>
+        </div>
+
+        <!-- Item 3 -->
+        <div class="bg-teal-50/70 p-6 rounded-2xl border border-teal-100 flex gap-4 hover:shadow-md transition">
+            <div class="w-12 h-12 bg-teal-500 text-white rounded-full flex items-center justify-center flex-shrink-0 shadow-md">
+                <i class="fas fa-leaf text-xl"></i>
+            </div>
+            <div>
+                <h4 class="font-bold text-dark mb-2">Zero-Waste Policy</h4>
+                <p class="text-sm text-slate-600 leading-relaxed">We protect this UNESCO Geopark diligently — every item in, every item out. Always.</p>
+            </div>
+        </div>
+
+        <!-- Item 4 -->
+        <div class="bg-amber-50/70 p-6 rounded-2xl border border-amber-100 flex gap-4 hover:shadow-md transition">
+            <div class="w-12 h-12 bg-amber-500 text-white rounded-full flex items-center justify-center flex-shrink-0 shadow-md">
+                <i class="fas fa-shield-alt text-xl"></i>
+            </div>
+            <div>
+                <h4 class="font-bold text-dark mb-2">Permits & Insurance Included</h4>
+                <p class="text-sm text-slate-600 leading-relaxed">Fully licensed, fully insured, completely worry-free. We handle everything from registration to safety checks.</p>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Booking Scarcity Call to Action -->
+    <div class="mt-8 bg-red-50 border-l-4 border-red-500 p-5 rounded-r-xl">
+        <h4 class="font-bold text-red-800 mb-1 flex items-center">
+            <i class="fas fa-calendar-check mr-2 text-lg"></i> Plan Your Rim Journey
+        </h4>
+        <p class="text-sm text-red-700 leading-relaxed">
+            Please reserve <strong>2–3 weeks in advance</strong>, especially during clear weather months. Experience the majesty of Rinjani from its most peaceful side — the Senaru Crater Rim.
+        </p>
+    </div>
+
+</section>
     </main>
 
     <!-- FOOTER CTA -->
@@ -490,34 +502,6 @@
             Chat with Local Expert
         </span>
     </a>
-    <script>
-  // 1. Mematikan Klik Kanan
-  document.addEventListener('contextmenu', function(e) {
-    e.preventDefault();
-  });
-
-  // 2. Mematikan Shortcut Keyboard Salin & Inspect Element
-  document.addEventListener('keydown', function(e) {
-    // Memblokir Ctrl+C, Ctrl+U, Ctrl+S, Ctrl+A, Ctrl+P
-    if (e.ctrlKey && (e.key === 'c' || e.key === 'C' || 
-                      e.key === 'u' || e.key === 'U' || 
-                      e.key === 's' || e.key === 'S' || 
-                      e.key === 'a' || e.key === 'A' || 
-                      e.key === 'p' || e.key === 'P')) {
-      e.preventDefault();
-    }
-    
-    // Memblokir tombol F12 (Developer Tools)
-    if (e.key === 'F12') {
-      e.preventDefault();
-    }
-
-    // Memblokir Ctrl+Shift+I (Developer Tools)
-    if (e.ctrlKey && e.shiftKey && (e.key === 'I' || e.key === 'i')) {
-      e.preventDefault();
-    }
-  });
-</script>
-
+ 
 </body>
 </html>
