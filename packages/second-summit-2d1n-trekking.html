@@ -76,74 +76,8 @@
             }
         }
     </script>
-     <style>
-      body {
-        -webkit-user-select: none; /* Safari */
-        -moz-user-select: none;    /* Firefox */
-        -ms-user-select: none;     /* IE / Edge */
-        user-select: none;         /* Chrome & standar modern */
-        top: 0px !important;
-      }
-
-      input, textarea {
-        -webkit-user-select: auto;
-        -moz-user-select: auto;
-        -ms-user-select: auto;
-        user-select: auto;
-      }
-
-      .goog-te-banner-frame, .skiptranslate { display: none !important; }
-    </style>
 </head>
 <body class="bg-slate-50 text-slate-800 font-sans antialiased">
-
-    <!-- HIDDEN GOOGLE TRANSLATE ENGINE -->
-    <div id="google_translate_element" style="display:none;"></div>
-
-    <script type="text/javascript">
-      function googleTranslateElementInit() {
-        new google.translate.TranslateElement({
-          pageLanguage: 'en',
-          includedLanguages: 'en,id,nl,zh-CN,th',
-          autoDisplay: false
-        }, 'google_translate_element');
-      }
-
-      function changeLanguage(langCode, langText, flagUrl) {
-        var flagImg = document.getElementById('current-flag');
-        var langTxt = document.getElementById('current-lang-text');
-        if(flagImg) flagImg.src = flagUrl;
-        if(langTxt) langTxt.innerText = langText;
-        
-        var selectObj = document.querySelector(".goog-te-combo");
-        if (selectObj) {
-          selectObj.value = langCode;
-          selectObj.dispatchEvent(new Event('change'));
-        }
-        
-        var menu = document.getElementById('lang-dropdown-menu');
-        if (menu) menu.classList.add('hidden');
-      }
-
-      function toggleLangDropdown(event) {
-        event.stopPropagation();
-        var menu = document.getElementById('lang-dropdown-menu');
-        if (menu) menu.classList.toggle('hidden');
-      }
-
-      window.addEventListener('click', function() {
-        var menu = document.getElementById('lang-dropdown-menu');
-        if (menu && !menu.classList.contains('hidden')) {
-          menu.classList.add('hidden');
-        }
-      });
-    </script>
-    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-
-    <style>
-      body { top: 0px !important; }
-      .goog-te-banner-frame, .skiptranslate { display: none !important; }
-    </style>
 
     <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W3C4XXJS" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
@@ -154,42 +88,6 @@
                 <a href="../index.html" class="flex-shrink flex items-center">
                     <img src="../images/logo-rinjani-trekking-pro.png" alt="Logo Rinjani Trekking Pro" class="h-12 md:h-16 w-auto object-contain">
                 </a>
-                
-                <div class="flex items-center space-x-2">
-                    
-                    <!-- DROPDOWN TRANSLATE BENDERA (5 BAHASA) -->
-                    <div class="relative inline-block">
-                        <button onclick="toggleLangDropdown(event)" class="flex items-center space-x-1 bg-slate-100 hover:bg-slate-200 border border-slate-200 px-2.5 py-1.5 rounded-full text-xs font-bold text-slate-700 transition cursor-pointer">
-                            <img id="current-flag" src="https://flagcdn.com/w20/gb.png" class="w-4 h-auto rounded-sm" alt="Flag">
-                            <span id="current-lang-text">EN</span>
-                            <i class="fas fa-chevron-down text-[10px] text-slate-500 ml-0.5"></i>
-                        </button>
-
-                        <!-- Menu Pilihan 5 Bahasa -->
-                        <div id="lang-dropdown-menu" class="hidden absolute right-0 mt-2 w-36 bg-white rounded-xl shadow-2xl border border-slate-100 py-1.5 z-50">
-                            <button onclick="changeLanguage('en', 'EN', 'https://flagcdn.com/w20/gb.png')" class="w-full text-left px-3 py-2 text-xs font-semibold text-slate-700 hover:bg-blue-50 flex items-center space-x-2 cursor-pointer">
-                                <img src="https://flagcdn.com/w20/gb.png" class="w-4 h-auto rounded-sm">
-                                <span>EN (English)</span>
-                            </button>
-                            <button onclick="changeLanguage('id', 'ID', 'https://flagcdn.com/w20/id.png')" class="w-full text-left px-3 py-2 text-xs font-semibold text-slate-700 hover:bg-blue-50 flex items-center space-x-2 cursor-pointer">
-                                <img src="https://flagcdn.com/w20/id.png" class="w-4 h-auto rounded-sm">
-                                <span>ID (Indonesia)</span>
-                            </button>
-                            <button onclick="changeLanguage('nl', 'NL', 'https://flagcdn.com/w20/nl.png')" class="w-full text-left px-3 py-2 text-xs font-semibold text-slate-700 hover:bg-blue-50 flex items-center space-x-2 cursor-pointer">
-                                <img src="https://flagcdn.com/w20/nl.png" class="w-4 h-auto rounded-sm">
-                                <span>NL (Dutch)</span>
-                            </button>
-                            <button onclick="changeLanguage('zh-CN', 'CN', 'https://flagcdn.com/w20/cn.png')" class="w-full text-left px-3 py-2 text-xs font-semibold text-slate-700 hover:bg-blue-50 flex items-center space-x-2 cursor-pointer">
-                                <img src="https://flagcdn.com/w20/cn.png" class="w-4 h-auto rounded-sm">
-                                <span>CN (Chinese)</span>
-                            </button>
-                            <button onclick="changeLanguage('th', 'TH', 'https://flagcdn.com/w20/th.png')" class="w-full text-left px-3 py-2 text-xs font-semibold text-slate-700 hover:bg-blue-50 flex items-center space-x-2 cursor-pointer">
-                                <img src="https://flagcdn.com/w20/th.png" class="w-4 h-auto rounded-sm">
-                                <span>TH (Thai)</span>
-                            </button>
-                        </div>
-                    </div>
-
                     <!-- Tombol Kembali Ringkas (Back) -->
                     <a href="../index.html" class="bg-blue-50 text-primary hover:bg-primary hover:text-white px-3 py-1.5 rounded-full text-xs font-bold transition flex items-center border border-blue-200 whitespace-nowrap">
                         <i class="fas fa-arrow-left mr-1"></i> Home
@@ -204,7 +102,7 @@
 
     <!-- HERO HEADER -->
     <header class="bg-dark text-white py-16 md:py-24 relative overflow-hidden text-center">
-        <div class="absolute inset-0 z-0 opacity-40 bg-cover bg-center" style="background-image: url('../images/senaru-crater-rim.jpg');"></div>
+        <div class="absolute inset-0 z-0 opacity-40 bg-cover bg-center" style="background-image: url('../images/3D2N-trekking-sembalun-senaru9.jpeg');"></div>
         <div class="relative z-10 max-w-4xl mx-auto px-4">
             <span class="bg-orange-500 text-white text-xs md:text-sm font-extrabold tracking-wider uppercase px-4 py-1.5 rounded-full mb-4 inline-block shadow-md">
                 🔥 Premium High-Altitude Adventure
@@ -383,7 +281,7 @@
                     <!-- PHOTO GRID SAMA PERSIS SEPERTI SCREENSHOT (1 BESAR KIRI + 2 TUMPUK KANAN) -->
                     <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
                         <div class="md:col-span-2 overflow-hidden rounded-2xl h-64 md:h-80">
-                            <img src="../images/senaru-crater-rim.jpg" alt="Senaru Crater Rim Campsite" class="w-full h-full object-cover hover:scale-105 transition duration-500">
+                            <img src="../images/3D2N-trekking-sembalun-senaru7.jpeg" alt="Senaru Crater Rim Campsite" class="w-full h-full object-cover hover:scale-105 transition duration-500">
                         </div>
                         <div class="flex flex-col gap-4 h-64 md:h-80">
                             <div class="overflow-hidden rounded-2xl h-1/2">
@@ -432,7 +330,7 @@
                     <!-- PHOTO GRID SAMA PERSIS SEPERTI SCREENSHOT (1 BESAR KIRI + 2 TUMPUK KANAN) -->
                     <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
                         <div class="md:col-span-2 overflow-hidden rounded-2xl h-64 md:h-80">
-                            <img src="../images/senaru-rim-rinjani.jpg" alt="Sangkarang Peak View" class="w-full h-full object-cover hover:scale-105 transition duration-500">
+                            <img src="../images/rinjani-trekking-trail.jpg" alt="Sangkarang Peak View" class="w-full h-full object-cover hover:scale-105 transition duration-500">
                         </div>
                         <div class="flex flex-col gap-4 h-64 md:h-80">
                             <div class="overflow-hidden rounded-2xl h-1/2">
@@ -514,34 +412,7 @@
             Chat with Local Expert
         </span>
     </a>
-    <script>
-  // 1. Mematikan Klik Kanan
-  document.addEventListener('contextmenu', function(e) {
-    e.preventDefault();
-  });
-
-  // 2. Mematikan Shortcut Keyboard Salin & Inspect Element
-  document.addEventListener('keydown', function(e) {
-    // Memblokir Ctrl+C, Ctrl+U, Ctrl+S, Ctrl+A, Ctrl+P
-    if (e.ctrlKey && (e.key === 'c' || e.key === 'C' || 
-                      e.key === 'u' || e.key === 'U' || 
-                      e.key === 's' || e.key === 'S' || 
-                      e.key === 'a' || e.key === 'A' || 
-                      e.key === 'p' || e.key === 'P')) {
-      e.preventDefault();
-    }
-    
-    // Memblokir tombol F12 (Developer Tools)
-    if (e.key === 'F12') {
-      e.preventDefault();
-    }
-
-    // Memblokir Ctrl+Shift+I (Developer Tools)
-    if (e.ctrlKey && e.shiftKey && (e.key === 'I' || e.key === 'i')) {
-      e.preventDefault();
-    }
-  });
-</script>
+  
 
 </body>
 </html>
