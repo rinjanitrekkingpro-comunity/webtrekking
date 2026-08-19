@@ -1,1 +1,346 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Rinjani Trekking Pro</title>
+    <meta name="description" content="Get in touch with Rinjani Trekking Pro. We are ready to answer your questions and help you book your Mount Rinjani hiking adventure.">
+    
+    <link rel="icon" type="image/png" href="../images/logo-rinjani-trekking-pro.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Playball&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="../css/style.css">
+    
+    <style>
+      body { top: 0px !important; }
+      .goog-te-banner-frame, .skiptranslate { display: none !important; }
+      .page-section { display: block !important; }
+      .dropdown:hover .dropdown-menu { display: block; }
+    </style>
+</head>
+<body class="bg-slate-50 text-gray-800 font-sans antialiased overflow-x-hidden">
 
+<nav class="fixed w-full z-50 transition-all duration-300 bg-white shadow-md" id="navbar">
+    <div class="bg-slate-900 text-white text-xs py-2 px-4 sm:px-6 lg:px-8 flex justify-between items-center">
+        <div class="hidden sm:block text-gray-300 font-medium">
+            <span><i class="fab fa-whatsapp text-green-500 mr-1"></i> +62 859 3315 0749</span>
+        </div>
+        <div class="flex space-x-5 ml-auto">
+            <a href="#" class="hover:text-blue-500 transition transform hover:scale-110"><i class="fab fa-facebook-f text-sm"></i></a>
+            <a href="https://www.instagram.com/rinjanitrekkingpro/" target="_blank" class="hover:text-pink-500 transition transform hover:scale-110"><i class="fab fa-instagram text-sm"></i></a>
+            <a href="https://www.youtube.com/@rinjanitrekkingpro" target="_blank" class="hover:text-red-500 transition transform hover:scale-110"><i class="fab fa-youtube text-sm"></i></a>
+        </div>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-20 relative">
+            <div class="flex-shrink-0 flex items-center cursor-pointer">
+                <a href="../index.html">
+                    <img src="../images/logo-rinjani-trekking-pro.png" alt="Logo Rinjani Trekking Pro" class="h-16 md:h-20 w-auto object-contain p-1 lg:scale-110 transition-transform">
+                </a>
+            </div>
+            
+            <div class="hidden md:flex space-x-5 lg:space-x-6 items-center">
+                <a href="../index.html" class="nav-link font-medium text-gray-700 hover:text-primary">Home</a>
+                <a href="../about/index.html" class="nav-link font-medium text-gray-700 hover:text-primary">About Us</a>
+                
+                <div class="relative dropdown">
+                    <button class="nav-link font-medium text-gray-700 hover:text-primary flex items-center cursor-pointer">
+                        Packages <i class="fas fa-chevron-down ml-1 text-xs"></i>
+                    </button>
+                    <div class="dropdown-menu absolute hidden pt-2 w-48 bg-white rounded-xl shadow-xl border border-gray-100 pb-2">
+                        <a href="../index.html#packages" class="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50">All Packages</a>
+                        <a href="../packages/2d1n-summit.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50">2 Days 1 Night Summit</a>
+                        <a href="../packages/3d2n-lake.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50">3 Days 2 Nights Lake</a>
+                    </div>
+                </div>
+
+                <div class="relative dropdown">
+                    <button class="nav-link font-medium text-gray-700 hover:text-primary flex items-center cursor-pointer">
+                        Info <i class="fas fa-chevron-down ml-1 text-xs"></i>
+                    </button>
+                    <div class="dropdown-menu absolute hidden pt-2 w-48 bg-white rounded-xl shadow-xl border border-gray-100 pb-2">
+                        <a href="../pricing/index.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50">Pricing</a>
+                        <a href="../index.html#equipment" class="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50">Equipment</a>
+                        <a href="../index.html#faq" class="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50">FAQ</a>
+                    </div>
+                </div>
+                
+                <a href="../gallery/index.html" class="nav-link font-medium text-gray-700 hover:text-primary">Gallery</a>
+                <a href="#" class="nav-link font-bold text-primary">Contact</a>
+
+                <a href="https://wa.me/6285933150749" target="_blank" class="bg-primary hover:bg-blue-700 text-white px-5 py-2.5 rounded-full font-semibold transition shadow-lg text-sm">
+                    Book Now
+                </a>
+            </div>
+
+            <div class="flex items-center md:hidden">
+                <button id="mobile-menu-btn" class="text-gray-700 hover:text-primary focus:outline-none text-2xl p-1.5 cursor-pointer">
+                    <i class="fas fa-ellipsis-v"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 absolute top-full left-0 w-full shadow-2xl z-50">
+        <div class="px-6 pt-4 pb-8 space-y-2 max-h-[85vh] overflow-y-auto">
+            <a href="../index.html" class="block px-4 py-3 rounded-xl font-bold text-gray-700 hover:bg-blue-50">Home</a>
+            <a href="../about/index.html" class="block px-4 py-3 rounded-xl font-bold text-gray-700 hover:bg-blue-50">About Us</a>
+            <a href="../pricing/index.html" class="block px-4 py-3 rounded-xl font-bold text-gray-700 hover:bg-blue-50">Pricing</a>
+            <a href="../gallery/index.html" class="block px-4 py-3 rounded-xl font-bold text-gray-700 hover:bg-blue-50">Gallery</a>
+            <a href="#" class="block px-4 py-3 rounded-xl font-bold text-primary bg-blue-50">Contact</a>
+        </div>
+    </div>
+</nav>
+
+<main class="pt-28 pb-16">
+    <section class="page-section py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-16">
+                <span class="font-script text-4xl text-secondary mb-2 block">Get in Touch</span>
+                <h1 class="font-heading font-bold text-4xl md:text-5xl text-dark">Contact Us</h1>
+                <div class="w-24 h-1.5 bg-primary mx-auto mt-6 rounded-full"></div>
+                <p class="text-gray-600 mt-6 max-w-2xl mx-auto text-lg">We are ready to help answer all your questions regarding your Mount Rinjani climb. Reach out to us anytime!</p>
+            </div>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-stretch">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 gap-6">
+                    <div class="p-8 bg-blue-50 rounded-3xl border border-blue-100 hover:shadow-lg transition flex items-center">
+                        <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center flex-shrink-0 mr-6 shadow-sm"><i class="fas fa-map-marker-alt text-2xl text-primary"></i></div>
+                        <div class="text-left">
+                            <h3 class="font-bold text-xl mb-1 text-dark">Basecamp Address</h3>
+                            <p class="text-gray-600 text-sm">Jl. Pariwisata Senaru, Kec. Bayan, Lombok Utara, NTB 83354</p>
+                        </div>
+                    </div>
+                    
+                    <div class="p-8 bg-green-50 rounded-3xl border border-green-100 hover:shadow-lg transition flex items-center">
+                        <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center flex-shrink-0 mr-6 shadow-sm"><i class="fab fa-whatsapp text-2xl text-green-500"></i></div>
+                        <div class="text-left">
+                            <h3 class="font-bold text-xl mb-1 text-dark">WhatsApp (24/7)</h3>
+                            <p class="text-gray-600 text-sm mb-1">+62 859 3315 0749</p>
+                            <a href="https://wa.me/6285933150749" target="_blank" class="text-green-600 font-bold text-sm hover:underline">Chat Now →</a>
+                        </div>
+                    </div>
+                    
+                    <div class="p-8 bg-blue-50 rounded-3xl border border-blue-100 hover:shadow-lg transition flex items-center">
+                        <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center flex-shrink-0 mr-6 shadow-sm"><i class="fas fa-envelope text-2xl text-primary"></i></div>
+                        <div class="text-left">
+                            <h3 class="font-bold text-xl mb-1 text-dark">Email Us</h3>
+                            <p class="text-gray-600 text-sm mb-1">rinjanitrekkingpro@gmail.com</p>
+                            <a href="mailto:rinjanitrekkingpro@gmail.com" class="text-primary font-bold text-sm hover:underline">Send Email →</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-gray-200 rounded-3xl overflow-hidden shadow-lg border border-gray-100 h-[400px] lg:h-auto relative">
+                    <iframe 
+                        src="https://maps.google.com/maps?q=Rinjani%20Trekking%20Pro,%20Senaru&t=&z=13&ie=UTF8&iwloc=&output=embed" 
+                        width="100%" 
+                        height="100%" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade"
+                        class="absolute inset-0">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+       
+
+          <section id="booking" class="page-section py-20 bg-blue-50">
+            <div class="max-w-4xl mx-auto px-4">
+                <div class="bg-white rounded-[3rem] shadow-2xl overflow-hidden border border-blue-100 grid grid-cols-1 md:grid-cols-5">
+                    
+                    <div class="md:col-span-2 bg-primary p-10 text-white flex flex-col justify-center">
+                        <h2 class="font-heading font-bold text-3xl mb-6">Ready to Hike?</h2>
+                        <p class="text-blue-100 mb-8 leading-relaxed">Fill the form and our local expert will contact you within 1 hour to discuss your adventure.</p>
+                        <ul class="space-y-4 text-sm">
+                            <li class="flex items-center"><i class="fas fa-check-circle mr-3 text-accent"></i> 100% Secure Booking</li>
+                            <li class="flex items-center"><i class="fas fa-check-circle mr-3 text-accent"></i> Local Guide Expert</li>
+                            <li class="flex items-center"><i class="fas fa-check-circle mr-3 text-accent"></i> Flexible Dates</li>
+                        </ul>
+                    </div>
+
+                    <div class="md:col-span-3 p-10">
+                        <form id="bookingForm" onsubmit="sendToWhatsApp(event)" class="space-y-4">
+                            <div>
+                                <label class="text-xs font-bold text-gray-400 uppercase tracking-widest ml-1">Full Name</label>
+                                <div class="relative mt-1">
+                                    <i class="fas fa-user absolute left-4 top-4 text-gray-300"></i>
+                                    <input type="text" id="book-name" required class="w-full bg-slate-50 border-none rounded-2xl px-12 py-4 focus:ring-2 focus:ring-primary outline-none" placeholder="Enter your name">
+                                </div>
+                            </div>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                <div>
+                                    <label class="text-xs font-bold text-gray-400 uppercase tracking-widest ml-1">Package</label>
+                                    <select id="book-package" required class="w-full bg-slate-50 border-none rounded-2xl px-4 py-4 mt-1 focus:ring-2 focus:ring-primary outline-none text-gray-600">
+                                        <option value="">Select Package</option>
+                                        <option value="2D1N Summit">2D1N Summit</option>
+                                        <option value="3D2N Lake">3D2N Lake</option>
+                                        <option value="4D3N Advanced">4D3N Advanced</option>
+                                        <option value="2D1N Stampol">2D1N Stampol</option>
+                                        <option value="Sharing Package">Sharing Package (USD)</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label class="text-xs font-bold text-gray-400 uppercase tracking-widest ml-1">Hiking Date</label>
+                                    <input type="date" id="book-date" required class="w-full bg-slate-50 border-none rounded-2xl px-4 py-4 mt-1 focus:ring-2 focus:ring-primary outline-none text-gray-600">
+                                </div>
+                            </div>
+                            <div>
+                                <label class="text-xs font-bold text-gray-400 uppercase tracking-widest ml-1">Message (Optional)</label>
+                                <textarea id="book-message" rows="3" class="w-full bg-slate-50 border-none rounded-2xl px-4 py-4 mt-1 focus:ring-2 focus:ring-primary outline-none" placeholder="Any special requests?"></textarea>
+                            </div>
+                            <button type="submit" class="w-full bg-primary hover:bg-blue-700 text-white font-bold py-5 rounded-2xl shadow-xl transition transform hover:scale-[1.02] mt-4 flex justify-center items-center">
+                                <i class="fab fa-whatsapp mr-3 text-xl"></i> START BOOKING NOW
+                            </button>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION PAYMENT & SOCIAL COMMITMENT -->
+    <section class="page-section py-20 bg-slate-50 border-t border-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <span class="font-script text-4xl text-secondary mb-2 block">Trek With Purpose</span>
+                <h2 class="font-heading font-bold text-3xl md:text-4xl text-dark">Payment Info & Our Commitment</h2>
+                <div class="w-24 h-1.5 bg-primary mx-auto mt-6 rounded-full"></div>
+                <p class="text-gray-600 mt-4 max-w-2xl mx-auto text-sm md:text-base">
+                    When you trek with us, you are not just buying a tour. You are empowering the local community and protecting nature.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-stretch max-w-5xl mx-auto">
+                
+                <!-- KOTAK KIRI: PAYMENT & PROMO -->
+                <div class="bg-white rounded-3xl shadow-xl p-8 md:p-10 border-t-4 border-blue-500 transform transition duration-300 hover:-translate-y-2">
+                    <div class="flex items-center mb-6">
+                        <div class="w-14 h-14 bg-blue-50 rounded-full flex items-center justify-center text-blue-600 text-2xl mr-4 shadow-inner">
+                            <i class="fas fa-wallet"></i>
+                        </div>
+                        <h3 class="font-heading font-extrabold text-2xl text-slate-800">Booking & Payment</h3>
+                    </div>
+                    
+                    <div class="space-y-6">
+                        <div>
+                            <h4 class="font-bold text-slate-800 mb-2 flex items-center">
+                                <i class="fas fa-check-circle text-primary mr-2"></i> Low 10% Deposit
+                            </h4>
+                            <p class="text-sm text-gray-600 leading-relaxed pl-6">
+                                To lock in your dates and secure your expert guides and porters, we only require a minimum deposit of <strong>10% from the total price</strong>. The remaining balance can be easily settled in cash upon arrival at our basecamp.
+                            </p>
+                        </div>
+                        <div class="bg-orange-50 p-5 rounded-2xl border border-orange-100">
+                            <h4 class="font-bold text-orange-700 mb-2 flex items-center">
+                                <i class="fas fa-users text-orange-500 mr-2"></i> Group Special Promo!
+                            </h4>
+                            <p class="text-sm text-orange-800 leading-relaxed">
+                                Trekking is better together! If you gather a group of 10 people, we will give you <strong>1 extra slot for FREE!</strong> (Total 11 hikers, but you only pay for 10). Perfect for student groups or large families.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- KOTAK KANAN: SOCIAL & ENVIRONMENT -->
+                <div class="bg-white rounded-3xl shadow-xl p-8 md:p-10 border-t-4 border-green-500 transform transition duration-300 hover:-translate-y-2">
+                    <div class="flex items-center mb-6">
+                        <div class="w-14 h-14 bg-green-50 rounded-full flex items-center justify-center text-green-600 text-2xl mr-4 shadow-inner">
+                            <i class="fas fa-hands-helping"></i>
+                        </div>
+                        <h3 class="font-heading font-extrabold text-2xl text-slate-800">Our Social Impact</h3>
+                    </div>
+                    
+                    <div class="space-y-6">
+                        <div>
+                            <h4 class="font-bold text-slate-800 mb-2 flex items-center">
+                                <i class="fas fa-heart text-red-500 mr-2"></i> Sharing with the Unfortunate
+                            </h4>
+                            <p class="text-sm text-gray-600 leading-relaxed pl-6">
+                                Your adventure changes lives. A portion of the profit from every booking is <strong>donated directly to orphans and underprivileged families</strong> in our local Sasak villages to help with food and education.
+                            </p>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-slate-800 mb-2 flex items-center">
+                                <i class="fas fa-leaf text-green-500 mr-2"></i> Beyond Mountain Cleanliness
+                            </h4>
+                            <p class="text-sm text-gray-600 leading-relaxed pl-6">
+                                Our eco-mission goes beyond bringing trash down from Mount Rinjani. We actively join forces with <strong>local environmental communities</strong> to conduct regular clean-ups in the villages surrounding the mountain, ensuring a healthy environment for the locals.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- KOTAK KIRI: PAYMENT & PROMO -->
+                <div class="bg-white rounded-3xl shadow-xl p-8 md:p-10 border-t-4 border-blue-500 transform transition duration-300 hover:-translate-y-2">
+                    <div class="flex items-center mb-6">
+                        <div class="w-14 h-14 bg-blue-50 rounded-full flex items-center justify-center text-blue-600 text-2xl mr-4 shadow-inner">
+                            <i class="fas fa-wallet"></i>
+                        </div>
+                        <h3 class="font-heading font-extrabold text-2xl text-slate-800">Booking & Payment</h3>
+                    </div>
+                    
+                    <div class="space-y-6">
+                        <!-- Info Deposit -->
+                      <div>
+                            <h4 class="font-bold text-slate-800 mb-2 flex items-center">
+                                <i class="fas fa-check-circle text-primary mr-2"></i> Low 10% Deposit
+                            </h4>
+                            <p class="text-sm text-gray-600 leading-relaxed pl-6">
+                                Secure your booking with just a <strong>10% deposit</strong>. Settle the remaining balance in cash upon arrival at our basecamp.
+                            </p>
+                        </div>
+                        <!-- Info Metode Pembayaran Baru -->
+                        <div>
+                            <h4 class="font-bold text-slate-800 mb-3 flex items-center">
+                                <i class="fas fa-credit-card text-primary mr-2"></i> Accepted Payment Methods
+                            </h4>
+                            <!-- Jejeran Logo Pembayaran -->
+                            <div class="flex flex-wrap items-center gap-3 pl-6 mb-2">
+                                <img src="../images/mandiri.png" alt="Bank Mandiri" title="Bank Mandiri Transfer" class="h-8 w-auto object-contain rounded bg-white border border-gray-200 p-1 shadow-sm">
+                                <img src="../images/visa.png" alt="Visa" title="Visa" class="h-8 w-auto object-contain rounded bg-white border border-gray-200 p-1 shadow-sm">
+                                <img src="../images/mastercard.png" alt="Mastercard" title="Mastercard" class="h-8 w-auto object-contain rounded bg-white border border-gray-200 p-1 shadow-sm">
+                                <img src="../images/paypal.png" alt="PayPal" title="PayPal" class="h-8 w-auto object-contain rounded bg-white border border-gray-200 p-1 shadow-sm">
+                            </div>
+                            <p class="text-xs text-gray-500 pl-6">
+                                Safe and secure transactions via Bank Transfer, Credit Card, or PayPal.
+                            </p>
+                        </div>
+
+                        <!-- Promo Group -->
+                        <div class="bg-orange-50 p-5 rounded-2xl border border-orange-100">
+                            <h4 class="font-bold text-orange-700 mb-2 flex items-center">
+                                <i class="fas fa-users text-orange-500 mr-2"></i> <strong>Group Special Promo!</strong>
+                            </h4>
+                            <p class="text-sm text-gray-600 leading-relaxed pl-6">
+                                Trekking is better together! If you gather a group of 10 people, we will give you <br>
+                                <strong>1 extra slot for FREE!</strong> (Total 11 hikers, but you only pay for 10). Perfect for student groups or large families.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+</main>
+
+<footer class="bg-dark text-white pt-16 pb-8 border-t-4 border-primary">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-gray-400 text-sm">
+        <p>&copy; 2026 Rinjani Trekking Pro. All rights reserved.</p>
+    </div>
+</footer>
+
+<script src="../js/main.js"></script>
+</body>
+</html>
