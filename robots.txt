@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# Lokasi Sitemap Anda
+Sitemap: https://rinjanitrekkingpro.com/sitemap.xml
