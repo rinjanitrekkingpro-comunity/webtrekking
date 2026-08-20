@@ -948,75 +948,119 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
 </div>
 
-<div class="w-full lg:w-3/4">
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-        
-        <!-- Review 1 -->
-        <div class="bg-[#f8f9fa] rounded-2xl p-6 border border-slate-200 flex flex-col h-full hover:shadow-lg transition-shadow duration-300">
-            <div class="flex items-center mb-3">
-                <!-- PERBAIKAN: Tambah width & height -->
-                <img src="images/trip/alexisB.jpg" alt="Alexis B" width="100" height="100" class="w-10 h-10 rounded-full object-cover mr-3">
-                <div><h4 class="font-bold text-slate-800 text-sm">Alexis B</h4><p class="text-xs text-slate-500">Aug 2026</p></div>
-                <div class="ml-auto w-6 h-6 bg-[#00aa6c] rounded-full flex items-center justify-center text-white text-[10px]"><i class="fab fa-tripadvisor"></i></div>
-            </div>
-            <div class="flex items-center text-[#00aa6c] text-sm mb-2 space-x-0.5">
-                <i class="fas fa-circle"></i><i class="fas fa-circle"></i><i class="fas fa-circle"></i><i class="fas fa-circle"></i><i class="fas fa-circle"></i><i class="fas fa-check-circle text-blue-500 ml-1 text-xs" title="Verified Review"></i>
-            </div>
-            <h5 class="font-bold text-slate-800 text-sm mb-1">WONDERFUL</h5>
-            <p class="text-slate-600 text-sm mb-3 line-clamp-3 transition-all duration-300">I've never done anything like this before! The guide was amazing, he gave us great advice and made the trip so much fun. I highly recommend this team to anyone looking to hike Mount Rinjani.</p>
-            <button class="read-more-btn text-slate-500 text-xs font-semibold hover:underline focus:outline-none cursor-pointer mt-auto text-left w-fit">Read more</button>
+<!-- SECTION TRIPADVISOR REVIEWS -->
+<section class="tripadvisor-section section-padding">
+    <div class="container">
+        <div class="section-header">
+            <h2>Recommended on TripAdvisor</h2>
+            <p>We received excellent reviews on TripAdvisor from our happy adventurers.</p>
+            <div class="line"></div>
         </div>
-        
-        <!-- Review 2 -->
-        <div class="bg-[#f8f9fa] rounded-2xl p-6 border border-slate-200 flex flex-col h-full hover:shadow-lg transition-shadow duration-300">
-            <div class="flex items-center mb-3">
-                <!-- PERBAIKAN: Tambah width & height -->
-                <img src="images/trip/Ella.jpg" alt="Ella" width="100" height="100" class="w-10 h-10 rounded-full object-cover mr-3">
-                <div><h4 class="font-bold text-slate-800 text-sm">Ella</h4><p class="text-xs text-slate-500">Jul 2026</p></div>
-                <div class="ml-auto w-6 h-6 bg-[#00aa6c] rounded-full flex items-center justify-center text-white text-[10px]"><i class="fab fa-tripadvisor"></i></div>
-            </div>
-            <div class="flex items-center text-[#00aa6c] text-sm mb-2 space-x-0.5">
-                <i class="fas fa-circle"></i><i class="fas fa-circle"></i><i class="fas fa-circle"></i><i class="fas fa-circle"></i><i class="fas fa-circle"></i><i class="fas fa-check-circle text-blue-500 ml-1 text-xs" title="Verified Review"></i>
-            </div>
-            <h5 class="font-bold text-slate-800 text-sm mb-1">Amazing Team, Amazing Trek!</h5>
-            <p class="text-slate-600 text-sm mb-3 line-clamp-3 transition-all duration-300">We had the most amazing experience walking Rinjani with this company! From the very beginning they made everything so easy, even picking us up from Kuta at an awkward time with no fuss at all.</p>
-            <button class="read-more-btn text-slate-500 text-xs font-semibold hover:underline focus:outline-none cursor-pointer mt-auto text-left w-fit">Read more</button>
+
+       <div class="ta-custom-container">
+    <a href="https:https://www.tripadvisor.com/Attraction_Review-g297733-d34254101-Reviews-Rinjani_Trekking_Pro-Lombok_West_Nusa_Tenggara.html" target="_blank" rel="noopener noreferrer" class="ta-rating-box">
+        <img src="images/tripadvisor.png" alt="TripAdvisor Badge" class="ta-badge-img">
+        <h3 class="ta-excellent-title">EXCELLENT</h3>
+        <div class="ta-circles">
+            <span>●</span><span>●</span><span>●</span><span>●</span><span>●</span>
         </div>
-        
-        <!-- Review 3 -->
-        <div class="bg-[#f8f9fa] rounded-2xl p-6 border border-slate-200 flex flex-col h-full hover:shadow-lg transition-shadow duration-300">
-            <div class="flex items-center mb-3">
-                <!-- PERBAIKAN: Tambah width & height -->
-                <img src="images/trip/meteoS.png" alt="Mateo S" width="100" height="100" class="w-10 h-10 rounded-full object-cover mr-3">
-                <div><h4 class="font-bold text-slate-800 text-sm">Mateo S</h4><p class="text-xs text-slate-500">July 2026</p></div>
-                <div class="ml-auto w-6 h-6 bg-[#00aa6c] rounded-full flex items-center justify-center text-white text-[10px]"><i class="fab fa-tripadvisor"></i></div>
+        <p class="ta-review-count">Based on <strong>28 reviews</strong></p>
+        <span class="ta-btn-leave">
+            <i class="fab fa-tripadvisor"></i> Leave a Review
+        </span>
+    </a>
+            <!-- SISI KANAN: SLIDER KARTU REVIEWS -->
+            <div class="ta-slider-wrapper">
+                <button class="ta-slide-btn prev-btn" id="taPrevBtn"><i class="fas fa-chevron-left"></i></button>
+                
+                <div class="ta-reviews-slider" id="taReviewsSlider">
+                    <!-- Card Review 1 -->
+                    <div class="ta-review-card">
+                        <div class="ta-user-header">
+                            <div class="ta-avatar">
+                                <img src="images/trip/Ella.jpg" alt="Ella-Ella" class="ta-user-img">
+                            </div>
+                            <div class="ta-user-info">
+                                <h4>Ella</h4>
+                                <span>July 2026</span>
+                            </div>
+                            <i class="fab fa-tripadvisor ta-card-icon"></i>
+                        </div>
+                        <div class="ta-card-stars">●●●●● <i class="fas fa-check-circle verified-icon"></i></div>
+                        <h5>Amazing Team, Amazing Trek!</h5>
+                        <p class="ta-review-text">
+                            We had the most amazing experience walking Rinjani with this company! From the very beginning they made everything so easy, even picking us up from Kuta at an awkward time with no fuss at all. The accommodation before the trek was spotless, modern, and had the most beautiful view. Everyone was so kind and caring, always making sure we had everything we needed. We were incredibly well fed throughout the entire trip, with delicious meals and plenty of food to keep us going. We chose the route back through Torean, and it was honestly the most beautiful hike we've ever done. The whole trek is definitely challenging, but every step was worth it for the incredible scenery. Our guide, Adi was absolutely fantastic. He waited for us whenever we slowed down and was endlessly patient. He was also so much fun to be around and made the whole experience even more enjoyable. We couldn't have asked for a better team to do this trek with! 🥾⛰️🏞️🙏
+                        </p>
+                        <button class="ta-read-link">Read more <i class="fas fa-chevron-down"></i></button>
+                    </div>
+
+                    <!-- Card Review 2 -->
+                    <div class="ta-review-card">
+                        <div class="ta-user-header">
+                            <div class="ta-avatar">
+                                <img src="images/trip/meteoS.png" alt="Sarah W." class="ta-user-img">
+                            </div>
+                            <div class="ta-user-info">
+                                <h4>Mateo S</h4>
+                                <span>July 13, 2026</span>
+                            </div>
+                            <i class="fab fa-tripadvisor ta-card-icon"></i>
+                        </div>
+                        <div class="ta-card-stars">●●●●● <i class="fas fa-check-circle verified-icon"></i></div>
+                        <h5>Doing this shouldn’t be a decision, go. It was amazing</h5>
+                        <p class="ta-review-text">
+                            Couldn’t have asked for a better experience. The guides brought great energy from the from the start, from having breakfast arriving to our tent door to the encouragement throughout the trek. The entire experience was great. For suggestions for hikers going: 1. Bring your own snacks (snacks are provided but it way better to have your own supply for you and to share) 2. Bring a charged power bank. Charining outlet are scarce. 3. Bunking poles is a no brainer. You need them to claim the step slop of mountain Rinjani.
+                        </p>
+                        <button class="ta-read-link">Read more <i class="fas fa-chevron-down"></i></button>
+                    </div>
+
+                    <!-- Card Review 3 -->
+                    <div class="ta-review-card">
+                        <div class="ta-user-header">
+                            <div class="ta-avatar">
+                                <img src="images/trip/alexisB.jpg" alt="Richard Sun" class="ta-user-img">
+                            </div>
+                            <div class="ta-user-info">
+                                <h4>Alexis B</h4>
+                                <span>August 9, 2026</span>
+                            </div>
+                            <i class="fab fa-tripadvisor ta-card-icon"></i>
+                        </div>
+                        <div class="ta-card-stars">●●●●● <i class="fas fa-check-circle verified-icon"></i></div>
+                        <h5>WONDERFUL</h5>
+                        <p class="ta-review-text">
+                            I've never done anything like this before! The guide was amazing, he gave us great advice and made the trip so much fun. I highly recommend this team to anyone looking to hike Mount Rinjani.
+                        </p>
+                        <button class="ta-read-link">Read more <i class="fas fa-chevron-down"></i></button>
+                    </div>
+
+                    
+                    <!-- Card Review 4 -->
+                    <div class="ta-review-card">
+                        <div class="ta-user-header">
+                            <div class="ta-avatar">
+                                <img src="images/trip/tristan.png" alt="Richard Sun" class="ta-user-img">
+                            </div>
+                            <div class="ta-user-info">
+                                <h4>Tristan J</h4>
+                                <span>July 25, 2026</span>
+                            </div>
+                            <i class="fab fa-tripadvisor ta-card-icon"></i>
+                        </div>
+                        <div class="ta-card-stars">●●●●● <i class="fas fa-check-circle verified-icon"></i></div>
+                        <h5>Great Rinjani Experience</h5>
+                        <p class="ta-review-text">
+                            Such a great experience! The guides and porters were awesome! Everything went smoothly, strong recommend
+                        </p>
+                        <button class="ta-read-link">Read more <i class="fas fa-chevron-down"></i></button>
+                    </div>
+                </div>
+
+                <button class="ta-slide-btn next-btn" id="taNextBtn"><i class="fas fa-chevron-right"></i></button>
             </div>
-            <div class="flex items-center text-[#00aa6c] text-sm mb-2 space-x-0.5">
-                <i class="fas fa-circle"></i><i class="fas fa-circle"></i><i class="fas fa-circle"></i><i class="fas fa-circle"></i><i class="fas fa-circle"></i><i class="fas fa-check-circle text-blue-500 ml-1 text-xs" title="Verified Review"></i>
-            </div>
-            <h5 class="font-bold text-slate-800 text-sm mb-1">Doing this shouldn’t be a decision, go.</h5>
-            <p class="text-slate-600 text-sm mb-3 line-clamp-3 transition-all duration-300">Couldn’t have asked for a better experience. The guides brought great energy from the start, from having breakfast arriving to our tent door to the encouragement throughout the trek.</p>
-            <button class="read-more-btn text-slate-500 text-xs font-semibold hover:underline focus:outline-none cursor-pointer mt-auto text-left w-fit">Read more</button>
         </div>
-        
-        <!-- Review 4 -->
-        <div class="bg-[#f8f9fa] rounded-2xl p-6 border border-slate-200 flex flex-col h-full hover:shadow-lg transition-shadow duration-300">
-            <div class="flex items-center mb-3">
-               <!-- PERBAIKAN: Tambah width & height -->
-               <img src="images/trip/tristan.png" alt="Tristan J" width="100" height="100" class="w-10 h-10 rounded-full object-cover mr-3">
-                <div><h4 class="font-bold text-slate-800 text-sm">Tristan J</h4><p class="text-xs text-slate-500">Jul 2026</p></div>
-                <div class="ml-auto w-6 h-6 bg-[#00aa6c] rounded-full flex items-center justify-center text-white text-[10px]"><i class="fab fa-tripadvisor"></i></div>
-            </div>
-            <div class="flex items-center text-[#00aa6c] text-sm mb-2 space-x-0.5">
-                <i class="fas fa-circle"></i><i class="fas fa-circle"></i><i class="fas fa-circle"></i><i class="fas fa-circle"></i><i class="fas fa-circle"></i><i class="fas fa-check-circle text-blue-500 ml-1 text-xs" title="Verified Review"></i>
-            </div>
-            <h5 class="font-bold text-slate-800 text-sm mb-1">Great Rinjani Experience</h5>
-            <p class="text-slate-600 text-sm mb-3 line-clamp-3 transition-all duration-300">Such a great experience! The guides and porters were awesome! Everything went smoothly, strong recommend.</p>
-            <button class="read-more-btn text-slate-500 text-xs font-semibold hover:underline focus:outline-none cursor-pointer mt-auto text-left w-fit">Read more</button>
-        </div>
-        
     </div>
-</div>
+</section>
     </main>
 
  <footer class="bg-dark text-white pt-12 pb-6 border-t-4 border-primary relative">
