@@ -65,6 +65,45 @@
             }
         }
     </script>
+
+    <!-- Schema.org JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "TouristTrip",
+      "name": "2 Days 1 Night Hiking & Camping Crater Rim Stampol Senaru",
+      "description": "Hike to Crater Rim Stampol (2,450m) from Senaru. Open daily all year round, perfect for beginners, and a great alternative when Mount Rinjani National Park is closed.",
+      "touristType": ["Beginners", "Hikers", "Nature Lovers"],
+      "offers": {
+        "@type": "Offer",
+        "priceCurrency": "USD",
+        "availability": "https://schema.org/InStock",
+        "url": "https://rinjanitrekkingpro.com/packages/2d1n-stampol.html"
+      },
+      "provider": {
+        "@type": "TravelAgency",
+        "name": "Rinjani Trekking Pro",
+        "url": "https://rinjanitrekkingpro.com/",
+        "logo": "https://rinjanitrekkingpro.com/images/logo-rinjani-trekking-pro.png"
+      },
+      "itinerary": {
+        "@type": "ItemList",
+        "numberOfItems": 2,
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Day 1: Senaru Village to Crater Rim Stampol Campsite"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Day 2: Sunrise View and Descent to Senaru Village"
+          }
+        ]
+      }
+    }
+    </script>
 </head>
 <body class="bg-slate-50 text-slate-800 font-sans antialiased">
 
