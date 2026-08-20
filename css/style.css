@@ -2918,4 +2918,278 @@ html {
     }
 }
 
+/* ==========================================================================
+   9. TRIPADVISOR SECTION
+   ========================================================================== */
+.tripadvisor-section {
+    background-color: var(--bg-card);
+}
+
+/* Header Text Center */
+.tripadvisor-section .section-header {
+    text-align: center;
+    margin-bottom: 30px;
+    width: 100%;
+}
+
+.tripadvisor-section .section-header h2 {
+    margin-bottom: 6px;
+}
+
+.tripadvisor-section .section-header p {
+    margin-bottom: 12px;
+}
+
+.tripadvisor-section .section-header .line {
+    width: 50px;
+    height: 3px;
+    background-color: #00aa6c;
+    margin: 0 auto;
+    border-radius: 2px;
+}
+
+/* Layout Container */
+.ta-custom-container {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    width: 100%;
+}
+
+/* Sisi Kiri: Rating Box */
+.ta-rating-box {
+    flex: 0 0 190px;
+    text-align: center;
+    padding: 20px 15px;
+    background: var(--bg-page);
+    border-radius: var(--radius-md);
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.ta-rating-box:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-sm);
+}
+
+.ta-badge-img {
+    width: 100%;
+    max-width: 100px;
+    height: auto;
+    display: block;
+    margin: 0 auto 10px;
+    object-fit: contain;
+}
+
+.ta-excellent-title {
+    font-size: 1.1rem;
+    font-weight: 800;
+    color: var(--primary);
+    margin-bottom: 2px;
+}
+
+.ta-circles {
+    color: #00aa6c;
+    font-size: 1rem;
+    letter-spacing: 2px;
+    margin-bottom: 4px;
+}
+
+.ta-review-count {
+    font-size: 0.78rem;
+    color: var(--text-muted);
+    margin-bottom: 12px;
+}
+
+.ta-btn-leave {
+    display: inline-block;
+    padding: 6px 14px;
+    font-size: 0.76rem;
+    font-weight: 600;
+    color: #00aa6c;
+    border: 1.5px solid #00aa6c;
+    border-radius: var(--radius-full);
+    transition: background 0.2s ease, color 0.2s ease;
+}
+
+.ta-rating-box:hover .ta-btn-leave {
+    background: #00aa6c;
+    color: var(--white, #ffffff);
+}
+
+/* Sisi Kanan: Slider Wrapper */
+.ta-slider-wrapper {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.ta-reviews-slider {
+    display: flex;
+    gap: 16px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding: 6px;
+    width: 100%;
+    scrollbar-width: none;
+}
+
+.ta-reviews-slider::-webkit-scrollbar {
+    display: none;
+}
+
+/* Kartu Ulasan (Review Card) */
+.ta-review-card {
+    flex: 0 0 calc(33.333% - 11px);
+    min-width: 240px;
+    height: auto !important;
+    min-height: fit-content;
+    align-self: flex-start;
+    background: var(--bg-page);
+    border-radius: var(--radius-sm);
+    padding: 18px;
+    border-left: 4px solid #00aa6c;
+    box-shadow: var(--shadow-sm);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    transition: all 0.3s ease;
+}
+
+.ta-user-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 8px;
+}
+
+.ta-avatar {
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    overflow: hidden;
+    flex-shrink: 0;
+    background: #E0F2E9;
+}
+
+.ta-user-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.ta-user-info h4 {
+    font-size: 0.85rem;
+    margin: 0;
+}
+
+.ta-user-info span {
+    font-size: 0.7rem;
+    color: var(--text-light);
+}
+
+.ta-card-icon {
+    margin-left: auto;
+    color: #00aa6c;
+}
+
+.ta-card-stars {
+    color: #00aa6c;
+    font-size: 0.8rem;
+    margin-bottom: 6px;
+}
+
+.verified-icon {
+    color: #00aa6c;
+    font-size: 0.75rem;
+    margin-left: 4px;
+}
+
+.ta-review-card h5 {
+    font-size: 0.9rem;
+    margin-bottom: 6px;
+}
+
+/* Teks Ulasan dengan Efek Dropdown Slide */
+.ta-review-card p.ta-review-text {
+    font-size: 0.8rem;
+    line-height: 1.5;
+    margin-bottom: 10px;
+    max-height: 3.8em; /* Batas tinggi awal 3 baris */
+    overflow: hidden;
+    position: relative;
+    transition: max-height 0.45s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Gradien bayangan lembut di bawah teks saat terpotong */
+.ta-review-card p.ta-review-text::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 22px;
+    background: linear-gradient(rgba(255, 255, 255, 0), var(--bg-page, #ffffff));
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+/* Saat Read More Diklik: Buka penuh tanpa batasan */
+.ta-review-card.expanded p.ta-review-text {
+    max-height: 2500px !important; /* Cukup besar untuk teks review yang sangat panjang */
+    overflow: visible;
+}
+
+.ta-review-card.expanded p.ta-review-text::after {
+    opacity: 0;
+}
+
+/* Tombol Read More / Show Less (Selalu Berada di Paling Bawah) */
+.ta-read-link {
+    background: none;
+    border: none;
+    color: #00aa6c;
+    font-weight: 600;
+    font-size: 0.75rem;
+    cursor: pointer;
+    padding: 0;
+    text-align: left;
+    margin-top: auto;
+    display: inline-block;
+    width: fit-content;
+}
+
+/* Tombol Navigasi Panah Slider */
+.ta-slide-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #ffffff;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    color: #333333;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 5;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+    transition: background 0.2s ease;
+}
+
+.ta-slide-btn:hover {
+    background: #f0f0f0;
+}
+
+.prev-btn { left: 4px; }
+.next-btn { right: 4px; }
  
